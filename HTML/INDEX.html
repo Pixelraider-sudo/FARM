@@ -7,6 +7,11 @@
     <link rel="stylesheet" href="../CSS/INDEX.css">
 </head>
 <body>
+    <div>
+        <video loop autoplay playsinline muted>
+            <source src="../assets/IIIIIII.mp4" type="video/mp4">
+        </video>
+    </div>
     <div id="navbar">
         <nav>
             <a href="INDEX.html">Home</a>
@@ -28,13 +33,13 @@
         <button><a href="register.html">Register Now</a></button>
         <button><a href="crops.html">View Crops</a></button>
     </div>
-    <div>
+    <div id="platform">
         <p>
             Our platform is designed to empower farmers with accurate, timely, and practical agricultural information. It helps farmers determine the best planting time based on seasonal patterns and environmental conditions, ensuring improved yields and reduced losses. The system also provides detailed information on common crop pests, including their signs and symptoms, enabling early detection and effective control. In addition, farmers receive seasonal alerts and important planting precautions to stay prepared for changing weather conditions. The platform further offers disease prevention tips and management strategies to protect crops and promote sustainable farming practices.
         </p>
     </div>
+     <h2>Featured Crops</h2>
     <div id="container">
-        <h2>Featured Crops</h2>
         <div id="maize">
             <h3>Maize🌽</h3>
              <a href="maize.html">
@@ -56,7 +61,7 @@
              </a>
              <p>A high-value vegetable crop used in salads and cooking. Tomatoes require warm weather, proper watering, and protection from pests and fungal diseases.</p>
         </div>
-        <div id="potatoes🥔">
+        <div id="potatoes">
              <h3>Potatoes</h3>
               <a href="potato.html">
                <img src="potatoes.jpg" alt="potato Crop">
@@ -86,46 +91,30 @@
         </div>
     </div>
 
-   <section id="live-alerts">
-    <h2>🚨 Live Alerts</h2>
-
-    <div class="alert-box">
-        🌧 Heavy rainfall expected in Western region.
+  <div class="ticker">
+  <div class="ticker-track">
+    <div class="ticker-content">
+      🚨 Live Alerts 🌧 Heavy rainfall expected in Western region. 
+      🐛 Fall armyworm alert in maize farms. 
+      🌽 Maize: Best planted at the start of the rainy season. 
+      🍅 Tomatoes: Watch for early blight. 
+      🌾 Rice: Maintain consistent water levels. 
+      ☕ Coffee: Monitor for coffee berry disease. 
+      🍃 Tea: Check for tea mosquito bugs.
     </div>
 
-    <div class="alert-box">
-        🐛 Fall armyworm alert in maize farms.
+    <!-- Duplicate for seamless loop -->
+    <div class="ticker-content">
+      🚨 Live Alerts 🌧 Heavy rainfall expected in Western region. 
+      🐛 Fall armyworm alert in maize farms. 
+      🌽 Maize: Best planted at the start of the rainy season. 
+      🍅 Tomatoes: Watch for early blight. 
+      🌾 Rice: Maintain consistent water levels. 
+      ☕ Coffee: Monitor for coffee berry disease. 
+      🍃 Tea: Check for tea mosquito bugs.
     </div>
-
-    <div class="alert-box">
-        🌽 Maize: Best planted at the start of the rainy season.
-    </div>
-
-    <div class="alert-box">
-          Beans: Moderate rainfall required; monitor for bean aphids.
-    </div>
-
-    <div class="alert-box">
-        🍅 Tomatoes: Watch for early blight during humid conditions.
-    </div>
-
-    <div class="alert-box">
-        🥔 Potatoes: Ensure well-drained soil to prevent tuber rot.
-    </div>
-
-    <div class="alert-box">
-        🌾 Rice: Maintain consistent water levels in paddy fields.
-    </div>
-
-    <div class="alert-box">
-        ☕ Coffee: Monitor for coffee berry disease during rainy periods.
-    </div>
-
-    <div class="alert-box">
-        🍃 Tea: Prune regularly and check for tea mosquito bugs.
-    </div>
-
-</section>
+  </div>
+</div>
 </section>
  <footer>
     &copy; Smart Farming Starts Here <br>2026 All right reserved
