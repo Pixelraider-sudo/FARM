@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+</head>
+<body>
+    <div id="navbar">
+        <nav>
+            <a href="INDEX.html">Home</a>
+            <a href="crops.html">Crops</a>
+            <a href="pests.html">Pests and diseases</a>
+            <a href="calendar.html">Planting calender</a>
+            <a href="alerts.html">Precautions and alerts</a>
+            <a href="weather and seasons.html">Weather and Seasons</a>
+            <a href="register.html">Register</a>
+            <a href="login.html">Login</a>
+           
+        </nav>
+    </div>
+
+     <div id="farm-dashboard">
+        <header id="header">
+            <h1>🌾 Rice Farming Details</h1>
+            <p>Your complete guide to rice cultivation, pests, diseases, and market info.</p>
+        </header>
+
+        <section id="crop-image">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/5/50/Rice_field_in_Basra%2C_Iraq.jpg" alt="Rice" width="600">
+        </section>
+
+        <section id="planting-time">
+            <h2>1️⃣ Best Planting Time</h2>
+            <ul>
+                <li>Long rains: March – May</li>
+                <li>Dry season: September – November</li>
+            </ul>
+        </section>
+
+        <section id="soil-requirements">
+            <h2>2️⃣ Soil Requirements</h2>
+            <ul>
+                <li>Clay loam, water-retentive</li>
+                <li>pH 5 – 6.5</li>
+            </ul>
+        </section>
+
+        <section id="pests">
+            <h2>3️⃣ Common Pests Affecting Rice</h2>
+            <ul>
+                <li>Rice stem borer</li>
+                <li>Rice leaf folder</li>
+                <li>Brown planthopper</li>
+            </ul>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Rice_stem_borer.jpg" alt="Rice Stem Borer" width="400">
+        </section>
+
+        <section id="diseases">
+            <h2>4️⃣ Common Diseases</h2>
+            <ul>
+                <li>Rice blast</li>
+                <li>Bacterial leaf blight</li>
+                <li>Sheath rot</li>
+            </ul>
+        </section>
+
+        <section id="market-prices">
+            <h2>5️⃣ Current Market Prices</h2>
+            <p>Kenya: 1 kg = KES 70 – 90</p>
+            <p>International (Thailand): 1 kg ≈ $1.00</p>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/3/3a/Rice_Market.jpg" alt="Rice Market" width="500">
+        </section>
+
+        <section id="marketing-agencies">
+            <h2>6️⃣ Marketing Agencies & Support</h2>
+            <ul>
+                <li>Kenya Farmers Association</li>
+                <li>Agricultural Marketing Society of Kenya (AMSK)</li>
+                <li>National Cereals & Produce Board</li>
+            </ul>
+        </section>
+
+        <section id="community">
+            <h2>7️⃣ Join the Farmer Community</h2>
+            <p>Connect with rice farmers, discuss pest control, and share market trends.</p>
+            <a href="#">Join Community (Free)</a>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/4/42/Farming_community.jpg" alt="Farming Community" width="500">
+        </section>
+
+    <footer>
+    &copy; Smart Farming Starts Here <br>2026 All right reserved
+   </footer>
+</body>
+</html>

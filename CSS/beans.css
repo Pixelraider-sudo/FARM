@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+</head>
+<body>
+    <div id="navbar">
+        <nav>
+            <a href="INDEX.html">Home</a>
+            <a href="crops.html">Crops</a>
+            <a href="pests.html">Pests and diseases</a>
+            <a href="calendar.html">Planting calender</a>
+            <a href="alerts.html">Precautions and alerts</a>
+            <a href="weather and seasons.html">Weather and Seasons</a>
+            <a href="register.html">Register</a>
+            <a href="login.html">Login</a>
+           
+        </nav>
+    </div>
+     <div id="farm-dashboard">
+        <header id="header">
+            <h1>🫘 Beans Farming Details</h1>
+            <p>Your complete guide to beans cultivation, pests, diseases, and market info.</p>
+        </header>
+
+        <section id="crop-image">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/5/54/Phaseolus_vulgaris_-_common_bean.jpg" alt="Beans" width="600">
+        </section>
+
+        <section id="planting-time">
+            <h2>1️⃣ Best Planting Time</h2>
+            <ul>
+                <li>Long rains: March – May</li>
+                <li>Short rains: October – December</li>
+            </ul>
+        </section>
+
+        <section id="soil-requirements">
+            <h2>2️⃣ Soil Requirements</h2>
+            <ul>
+                <li>Loamy soil, well-drained</li>
+                <li>pH 6 – 7</li>
+            </ul>
+        </section>
+
+        <section id="pests">
+            <h2>3️⃣ Common Pests Affecting Beans</h2>
+            <ul>
+                <li>Bean aphids</li>
+                <li>Pod borers</li>
+                <li>Thrips</li>
+            </ul>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/8/8b/Bean_aphid.jpg" alt="Bean Aphid" width="400">
+        </section>
+
+        <section id="diseases">
+            <h2>4️⃣ Common Diseases</h2>
+            <ul>
+                <li>Bean rust</li>
+                <li>Bacterial blight</li>
+                <li>Anthracnose</li>
+            </ul>
+        </section>
+
+        <section id="market-prices">
+            <h2>5️⃣ Current Market Prices</h2>
+            <p>Kenya: 1 kg = KES 120 – 150</p>
+            <p>International (USA): 1 lb ≈ $1.80</p>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/1/1e/Beans_Market.jpg" alt="Beans Market" width="500">
+        </section>
+
+        <section id="marketing-agencies">
+            <h2>6️⃣ Marketing Agencies & Support</h2>
+            <ul>
+                <li>Kenya Farmers Association</li>
+                <li>Agricultural Marketing Society of Kenya (AMSK)</li>
+                <li>National Cereals & Produce Board</li>
+            </ul>
+        </section>
+
+        <section id="community">
+            <h2>7️⃣ Join the Farmer Community</h2>
+            <p>Share beans farming tips, ask questions, and track market trends with other farmers.</p>
+            <a href="#">Join Community (Free)</a>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/4/42/Farming_community.jpg" alt="Farming Community" width="500">
+        </section>
+    <footer>
+    &copy; Smart Farming Starts Here <br>2026 All right reserved
+    </footer>
+</body>
+</html>
