@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+</head>
+<body>
+    <div id="navbar">
+        <nav>
+            <a href="INDEX.html">Home</a>
+            <a href="crops.html">Crops</a>
+            <a href="pests.html">Pests and diseases</a>
+            <a href="calendar.html">Planting calender</a>
+            <a href="alerts.html">Precautions and alerts</a>
+            <a href="weather and seasons.html">Weather and Seasons</a>
+            <a href="register.html">Register</a>
+            <a href="login.html">Login</a>
+           
+        </nav>
+    </div>
+
+     <header>
+        <h1>Precautions & Alerts</h1>
+        <p>Important guidance for safe and effective farming</p>
+    </header>
+
+    <!-- Filters for Alerts (Optional) -->
+    <section id="alert-filters">
+        <h2>Filter Alerts</h2>
+        <label for="alert-type">Choose Alert Type:</label>
+        <select name="alert-type" id="alert-type">
+            <option value="danger">Danger</option>
+            <option value="caution">Caution</option>
+            <option value="safe">Safe</option>
+        </select>
+    </section>
+
+    <!-- Alert Cards Section -->
+    <section id="alert-cards">
+        <h2>Current Alerts</h2>
+
+        <!-- Danger Alert -->
+        <article class="alert-card" id="danger-alert">
+            <h3>⚠️ Danger</h3>
+            <p>Avoid planting maize during drought forecast.</p>
+        </article>
+
+        <!-- Caution Alert -->
+        <article class="alert-card" id="caution-alert">
+            <h3>⚠️ Caution</h3>
+            <p>Rotate crops to prevent soil diseases.</p>
+        </article>
+
+        <!-- Safe Alert -->
+        <article class="alert-card" id="safe-alert">
+            <h3>✅ Safe</h3>
+            <p>Use certified seeds for better yield.</p>
+        </article>
+
+        <!-- Additional Alerts -->
+        <article class="alert-card" id="caution-alert-2">
+            <h3>⚠️ Caution</h3>
+            <p>Early spraying prevents armyworm spread.</p>
+        </article>
+    </section>
+
+    <!-- Optional Notes Section -->
+    <section id="notes">
+        <h2>Notes for Farmers</h2>
+        <ul>
+            <li>Check weather forecasts before planting.</li>
+            <li>Follow recommended crop rotation schedules.</li>
+            <li>Always use certified and disease-free seeds.</li>
+            <li>Stay updated on pest alerts from local authorities.</li>
+        </ul>
+    </section>
+    <footer>
+    &copy; Smart Farming Starts Here <br>2026 All right reserved
+   </footer>
+</body>
+</html>

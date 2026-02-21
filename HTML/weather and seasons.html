@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+</head>
+<body>
+    <div id="navbar">
+        <nav>
+            <a href="INDEX.html">Home</a>
+            <a href="crops.html">Crops</a>
+            <a href="pests.html">Pests and diseases</a>
+            <a href="calendar.html">Planting calender</a>
+            <a href="alerts.html">Precautions and alerts</a>
+            <a href="weather and seasons.html">Weather and Seasons</a>
+            <a href="register.html">Register</a>
+            <a href="login.html">Login</a>
+           
+        </nav>
+    </div>
+     <header>
+        <h1>Planting Calendar</h1>
+        <p>Seasonal Guide for Farmers</p>
+    </header>
+
+    <!-- Region Filter -->
+    <section id="region-filter">
+        <h2>Select Region</h2>
+        <select name="region" id="region">
+            <option value="rift-valley">Rift Valley</option>
+            <option value="western">Western</option>
+            <option value="coastal">Coastal</option>
+        </select>
+    </section>
+
+    <!-- Season Filter -->
+    <section id="season-filter">
+        <h2>Select Season</h2>
+        <select name="season" id="season">
+            <option value="long-rains">Long Rains</option>
+            <option value="dry-season">Dry Season</option>
+            <option value="irrigation">Irrigation Crops</option>
+        </select>
+    </section>
+
+    <!-- Monthly Calendar -->
+    <section id="calendar">
+        <h2>Monthly Calendar</h2>
+
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Sun</th>
+                    <th>Mon</th>
+                    <th>Tue</th>
+                    <th>Wed</th>
+                    <th>Thu</th>
+                    <th>Fri</th>
+                    <th>Sat</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Week 1 -->
+                <tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>5</td>
+                    <td>6</td>
+                    <td>7</td>
+                </tr>
+                <!-- Week 2 -->
+                <tr>
+                    <td>8</td>
+                    <td>9</td>
+                    <td>10</td>
+                    <td>11</td>
+                    <td>12</td>
+                    <td>13</td>
+                    <td>14</td>
+                </tr>
+                <!-- Week 3 -->
+                <tr>
+                    <td>15</td>
+                    <td>16</td>
+                    <td>17</td>
+                    <td>18</td>
+                    <td>19</td>
+                    <td>20</td>
+                    <td>21</td>
+                </tr>
+                <!-- Week 4 -->
+                <tr>
+                    <td>22</td>
+                    <td>23</td>
+                    <td>24</td>
+                    <td>25</td>
+                    <td>26</td>
+                    <td>27</td>
+                    <td>28</td>
+                </tr>
+                <!-- Week 5 -->
+                <tr>
+                    <td>29</td>
+                    <td>30</td>
+                    <td>31</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Crop Info Example -->
+        <section id="crop-info">
+            <h2>Crop Planting Info</h2>
+            <ul>
+                <li>Maize - Long rains: Plant between March-April</li>
+                <li>Tomatoes - Dry season: Plant between June-July</li>
+                <li>Sugarcane - Irrigation: Plant any time with water supply</li>
+            </ul>
+        </section>
+    </section>
+    <footer>
+    &copy; Smart Farming Starts Here <br>2026 All right reserved
+   </footer>
+</body>
+</html>
