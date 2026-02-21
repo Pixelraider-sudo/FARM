@@ -1,93 +1,54 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
-</head>
-<body>
-    <div id="navbar">
-        <nav>
-            <a href="INDEX.html">Home</a>
-            <a href="crops.html">Crops</a>
-            <a href="pests.html">Pests and diseases</a>
-            <a href="calendar.html">Planting calender</a>
-            <a href="alerts.html">Precautions and alerts</a>
-            <a href="weather and seasons.html">Weather and Seasons</a>
-            <a href="register.html">Register</a>
-            <a href="login.html">Login</a>
-           
-        </nav>
-    </div>
-    <div id="farm-dashboard">
-        <header id="header">
-            <h1>☕ Coffee Farming Details</h1>
-            <p>Your complete guide to coffee cultivation, pests, diseases, and market info.</p>
-        </header>
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.08rem;
+}
+nav{
+    padding: 20px;
+    margin: auto;
+    background:linear-gradient(to left,rgb(227, 98, 98),rgb(110, 205, 110),hotpink,rgb(79, 79, 135));
+    position: fixed;
+    width: 100%;
+    text-align: center;
+}
+a{
+    padding: 10px;
+    color: cadetblue;
+    text-align: center;
+    font-weight: bold;
+    text-decoration: none;
+}
+/* unvisited link */
+a:link {
+  color: red;
+}
 
-        <section id="crop-image">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/4/45/Coffea_arabica_plant.jpg" alt="Coffee Plant" width="600">
-        </section>
+/* visited link */
+a:visited {
+  color: green;
+}
 
-        <section id="planting-time">
-            <h2>1️⃣ Best Planting Time</h2>
-            <ul>
-                <li>Long rains: March – May</li>
-                <li>Short rains: September – November</li>
-            </ul>
-        </section>
+/* mouse over link */
+a:hover {
+  color: hotpink;
+  background-color: aliceblue;
+  border-radius: 20px;
+}
 
-        <section id="soil-requirements">
-            <h2>2️⃣ Soil Requirements</h2>
-            <ul>
-                <li>Well-drained fertile soil</li>
-                <li>pH 6 – 6.5</li>
-            </ul>
-        </section>
-
-        <section id="pests">
-            <h2>3️⃣ Common Pests Affecting Coffee</h2>
-            <ul>
-                <li>Coffee berry borer</li>
-                <li>Aphids</li>
-                <li>Leaf miners</li>
-            </ul>
-            <img src="https://upload.wikimedia.org/wikipedia/commons/6/64/Coffee_berry_borer.jpg" alt="Coffee Berry Borer" width="400">
-        </section>
-
-        <section id="diseases">
-            <h2>4️⃣ Common Diseases</h2>
-            <ul>
-                <li>Coffee leaf rust</li>
-                <li>Coffee wilt disease</li>
-                <li>Brown eye spot</li>
-            </ul>
-        </section>
-
-        <section id="market-prices">
-            <h2>5️⃣ Current Market Prices</h2>
-            <p>Kenya: 1 kg = KES 400 – 600</p>
-            <p>International (USA): 1 lb ≈ $3.50</p>
-            <img src="https://upload.wikimedia.org/wikipedia/commons/f/f2/Coffee_market.jpg" alt="Coffee Market" width="500">
-        </section>
-
-        <section id="marketing-agencies">
-            <h2>6️⃣ Marketing Agencies & Support</h2>
-            <ul>
-                <li>Kenya Coffee Producers Association</li>
-                <li>Agricultural Marketing Society of Kenya (AMSK)</li>
-                <li>National Cereals & Produce Board</li>
-            </ul>
-        </section>
-
-        <section id="community">
-            <h2>7️⃣ Join the Farmer Community</h2>
-            <p>Connect with coffee farmers, share pest control strategies, and track market prices.</p>
-            <a href="#">Join Community (Free)</a>
-            <img src="https://upload.wikimedia.org/wikipedia/commons/4/42/Farming_community.jpg" alt="Farming Community" width="500">
-        </section>
-    <footer>
-    &copy; Smart Farming Starts Here <br>2026 All right reserved
-   </footer>
-</body>
-</html>
+/* selected link */
+a:active {
+  color: blue;
+}
+footer{
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    background-color: cornflowerblue;
+    width: 90%;
+    border-radius: 20px;
+    justify-items: center;
+    margin: auto;
+}
