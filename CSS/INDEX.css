@@ -97,7 +97,7 @@ button:hover{
   max-width: 500px;
   border-radius: 20px;
   opacity: 1;
-   background:linear-gradient(to right,rgb(227, 182, 98),rgb(119, 220, 119),rgb(31, 162, 202));
+  background:linear-gradient(to right,rgb(227, 182, 98),rgb(119, 220, 119),rgb(31, 162, 202));
 }
 #container{
   display: flex;
