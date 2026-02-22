@@ -5,12 +5,13 @@
 body{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 1.08rem;
+    text-align: center;
+    background-color: rgb(189, 69, 189);
 }
 nav{
     padding: 20px;
     margin: auto;
     background:linear-gradient(to left,rgb(227, 98, 98),rgb(110, 205, 110),hotpink,rgb(79, 79, 135));
-    position: fixed;
     width: 100%;
     text-align: center;
 }
@@ -33,22 +34,93 @@ a:visited {
 
 /* mouse over link */
 a:hover {
-  color: hotpink;
-  background-color: aliceblue;
-  border-radius: 20px;
+  color:purple;
+ 
 }
 
 /* selected link */
 a:active {
   color: blue;
 }
+h1,h2{
+  margin: 20px;
+  text-decoration: wavy;
+}
+p{
+  color: blue;
+  font-size: 15px;
+}
+table{
+  margin: auto;
+  border: 1px solid indigo;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 2px blue;
+  box-shadow: 0 5px 15px rgba(137, 203, 86, 0.4);
+}
+th,td,tr{
+  color: rgb(50, 139, 228);
+  padding: 20px;
+  border-radius: 10px;
+  margin: 10px;
+  background: linear-gradient(to right,grey,silver);
+}
+/* Fixed steady alert */
+.alert-box{
+    position: relative;
+    top: 10px;
+    right: 20px;
+    width: 320px;
+    background: #e9e4e9;
+    color: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(203, 58, 58, 0.4);
+    overflow: hidden;
+    text-align: center;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+/* Fade animation */
+.fade {
+    animation: fadeEffect 0.8s ease;
+}
+@keyframes fadeEffect {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+.maize{
+  font-size: 30px;
+}
+.beans{
+  font-size: 30px;
+}
+.potato{
+  font-size: 30px;
+}
+.tomato{
+  font-size: 30px;
+}
+.rice{
+  font-size: 30px;
+}
+.coffee{
+  font-size: 30px;
+}
+.tea{
+  font-size: 30px;
+}
 footer{
     text-align: center;
     padding: 10px;
     position: relative;
     background-color: cornflowerblue;
-    width: 90%;
+    width: 100%;
     border-radius: 20px;
     justify-items: center;
     margin: auto;
+    margin-top: 30px;
 }

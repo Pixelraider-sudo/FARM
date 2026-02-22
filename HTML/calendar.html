@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
     <link rel="stylesheet" href="../CSS/calendar.css">
+    <script src="../JS/calendar.js" defer></script>
 </head>
 <body>
     <div id="navbar">
@@ -30,14 +31,18 @@
 <body>
 
     <header>
-        <h1>Green Farming Platform</h1>
+        <h1>Smart Farming Starts Here Calendar</h1>
         <p>Your guide to crops, pests, and planting seasons</p>
     </header>
+    
     <section>
         <h2>Planting Calendar</h2>
         <p>Use this calendar to know the best months to plant different crops.</p>
-
-        <table>
+      <!-- Fixed Alert Box -->
+    <div class="alert-box">
+        <p id="alert-text"></p>
+    </div>
+        <table border="1">
             <tr>
                 <th>Crop</th>
                 <th>Jan</th>
@@ -55,15 +60,15 @@
             </tr>
             <tr>
                 <td>Maize</td>
-                <td>🌱</td>
-                <td>🌱</td>
-                <td>🌱</td>
-                <td>🌱</td>
+                <td class="maize">🌽</td>
+                <td class="maize">🌽</td>
+                <td class="maize">🌽</td>
+                <td class="maize">🌽</td>
                 <td></td>
                 <td></td>
                 <td></td>
-                <td>🌱</td>
-                <td>🌱</td>
+                <td class="maize">🌽</td>
+                <td class="maize">🌽</td>
                 <td></td>
                 <td></td>
                 <td></td>
@@ -71,13 +76,13 @@
             <tr>
                 <td>Beans</td>
                 <td></td>
-                <td>🌱</td>
-                <td>🌱</td>
-                <td>🌱</td>
+                <td class="beans">🌾</td>
+                <td class="beans">🌾</td>
+                <td class="beans">🌾</td>
                 <td></td>
                 <td></td>
                 <td></td>
-                <td>🌱</td>
+                <td class="beans">🌾</td>
                 <td></td>
                 <td></td>
                 <td></td>
@@ -87,14 +92,14 @@
                 <td>Tomatoes</td>
                 <td></td>
                 <td></td>
-                <td>🌱</td>
-                <td>🌱</td>
-                <td>🌱</td>
+                <td class="tomato">🍅</td>
+                <td class="tomato">🍅</td>
+                <td class="tomato">🍅</td>
+                <td class="tomato">🍅</td>
                 <td></td>
                 <td></td>
-                <td></td>
-                <td>🌱</td>
-                <td>🌱</td>
+                <td class="tomato">🍅</td>
+                <td class="tomato">🍅</td>
                 <td></td>
                 <td></td>
             </tr>
@@ -102,14 +107,14 @@
                 <td>Potatoes</td>
                 <td></td>
                 <td></td>
-                <td>🌱</td>
-                <td>🌱</td>
-                <td>🌱</td>
+                <td class="potato">🥔</td>
+                <td class="potato">🥔</td>
+                <td class="potato">🥔</td>
                 <td></td>
+                <td class="potato">🥔</td>
                 <td></td>
-                <td></td>
-                <td>🌱</td>
-                <td>🌱</td>
+                <td class="potato">🥔</td>
+                <td class="potato">🥔</td>
                 <td></td>
                 <td></td>
             </tr>
@@ -117,14 +122,14 @@
                 <td>Rice</td>
                 <td></td>
                 <td></td>
-                <td>🌱</td>
-                <td>🌱</td>
-                <td>🌱</td>
+                <td class="rice">🍚</td>
+                <td class="rice">🍚</td>
+                <td class="rice">🍚</td>
                 <td></td>
                 <td></td>
                 <td></td>
-                <td>🌱</td>
-                <td>🌱</td>
+                <td class="rice">🍚</td>
+                <td class="rice">🍚</td>
                 <td></td>
                 <td></td>
             </tr>
@@ -132,14 +137,14 @@
                 <td>Coffee</td>
                 <td></td>
                 <td></td>
-                <td>🌱</td>
-                <td>🌱</td>
-                <td>🌱</td>
+                <td class="coffee">☕</td>
+                <td class="coffee">☕</td>
+                <td class="coffee">☕</td>
                 <td></td>
                 <td></td>
                 <td></td>
-                <td>🌱</td>
-                <td>🌱</td>
+                <td class="coffee">☕</td>
+                <td class="coffee">☕</td>
                 <td></td>
                 <td></td>
             </tr>
@@ -147,20 +152,20 @@
                 <td>Tea</td>
                 <td></td>
                 <td></td>
-                <td>🌱</td>
-                <td>🌱</td>
-                <td>🌱</td>
+                <td class="rice">🍃</td>
+                <td class="rice">🍃</td>
+                <td class="rice">🍃</td>
                 <td></td>
                 <td></td>
                 <td></td>
-                <td>🌱</td>
-                <td>🌱</td>
+                <td class="rice">🍃</td>
+                <td class="rice">🍃</td>
                 <td></td>
                 <td></td>
             </tr>
         </table>
 
-        <div class="alert">
+        <!-- <div class="alert">
             ⚠️ Alert: Maize is prone to fall armyworm in March-April. Take preventive measures.
         </div>
 
@@ -176,7 +181,9 @@
             <li>Ensure proper spacing between crops.</li>
             <li>Use certified seeds for better yield.</li>
             <li>Regularly inspect for pests and remove infected plants.</li>
-        </ul>
+        </ul> -->
+
+   
     </section>
 
 </body>
