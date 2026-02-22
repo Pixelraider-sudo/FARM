@@ -7,6 +7,11 @@
     <link rel="stylesheet" href="../CSS/register.css">
 </head>
 <body>
+    <!-- <div>
+        <video muted autoplay loop playsinline>
+            <source src="../assets/register.mp4"><source
+        </video>
+    </div> -->
     <div id="navbar">
         <nav>
             <a href="INDEX.html">Home</a>
@@ -22,31 +27,37 @@
     </div>
 
     <div>
-        <h2>👨‍🌾 Farmer Register</h2>
-        <p>Grow Smarter 🌱 — Join Our Community of Farmers and Get Personalized Planting Alerts!</p>
-        <p>Harvest Success Starts Here 🍅 — Sign Up and Stay Ahead of Pests & Seasons!</p>
+        <h2><span class="icon">👨‍🌾</span> Farmer Register</h2>
+        <p>Grow Smarter <span class="icon">🌱</span> — Join Our Community of Farmers and Get Personalized Planting Alerts!</p>
+        <p>Harvest Success Starts Here <span class="icon">🍅</span> — Sign Up and Stay Ahead of Pests & Seasons!</p>
     </div>
 <div class="register-container">
+    <div id="reg">
+        <img src="../assets/registerfm.jpg" alt="register">
+        <p>Agriculture can help reduce poverty, raise incomes and improve food security for 80% of the world's poor, who live in rural areas and work mainly in farming. The World Bank Group is a leading financier of agriculture.</p>
+    </div>
     <form id="registerForm">
-        <label for="fullName">Full Name</label>
+        <label for="fullName">Full Name</label><br><br>
         <input type="text" id="fullName" name="fullName" required><br><br>
 
-        <label for="phone">Phone Number</label>
+        <label for="phone">Phone Number</label><br><br>
         <input type="tel" id="phone" name="phone" required><br><br>
 
-        <label for="email">Email</label>
+        <label for="email">Email</label><br><br>
         <input type="email" id="email" name="email" required><br><br>
 
-        <label for="county">County/Region</label>
+        <label for="county">County/Region</label><br><br>
         <input type="text" id="county" name="county" required><br><br>
 
-        <label for="crop">Crop Planted</label>
+        <label for="crop">Crop Planted</label><br><br>
         <input type="text" id="crop" name="crop" required><br><br>
 
-        <label for="password">Password</label>
+        <label for="password">Password</label><br><br>
         <input type="password" id="password" name="password" required><br><br>
 
         <button type="submit">Register</button>
+
+        <p>Have an account <a href="login.html">login</a></p>
     </form>
 </div>
     <footer>

@@ -5,12 +5,16 @@
 body{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 1.08rem;
+    text-align: center;
+    background-image: url(../assets/piqsels.com-id-zpvsc.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
+
 }
 nav{
     padding: 20px;
     margin: auto;
     background:linear-gradient(to left,rgb(227, 98, 98),rgb(110, 205, 110),hotpink,rgb(79, 79, 135));
-    position: fixed;
     width: 100%;
     text-align: center;
 }
@@ -33,22 +37,106 @@ a:visited {
 
 /* mouse over link */
 a:hover {
-  color: hotpink;
-  background-color: aliceblue;
-  border-radius: 20px;
+  color:rgb(59, 19, 169);
 }
 
 /* selected link */
 a:active {
   color: blue;
 }
+h2{
+  margin-top: 20px;
+  color: brown;
+  font-size: 30px;
+}
+p{
+  margin: 20PX;
+  font-size:1.05em;
+  font-style: italic;
+  color: rgb(194, 48, 192);
+}
+.icon{
+  font-size: 50px;
+}
+#reg{
+  flex: 1 1 300px;
+  width: 100%;
+  padding: 20px;
+  border-radius: 20px;
+  border: 2px solid rgb(111, 217, 238);
+  max-width: 400px;
+}
+#registerForm{
+  flex: 1 1 300px;
+  width: 100%;
+  padding: 20px;
+  border-radius: 20px;
+  border: 2px solid rgb(111, 217, 238);
+  max-width: 400px;
+}
+.register-container{
+  margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  
+}
+label{
+  font-style: italic;
+  color: lightseagreen;
+}
+input{
+  padding: 10px;
+  width: 50%;
+  border-radius: 20px;
+}
+button{
+  margin-top: 10px;
+  padding: 10px;
+  width: 60%;
+  border-radius: 20px;
+  font-style: italic;
+}
+button:hover{
+  width: 300px;
+  transition: width 2s;
+  background-color: aqua;
+}
+input:hover{
+  width: 300px;
+  transition: width 1s;
+  background-color: aqua;
+}
+img{
+  border-radius: 20px;
+  width: 100%;
+  height:auto;
+  margin-top: 120px;
+}
+img:hover{
+  width: 350px;
+  transition: width 1s;
+}
+p:hover,label:hover{
+  font-size: 18px;
+  transition: font-size 1s;
+}
+/* video{
+  top: 0;
+  left: 0;
+  border-radius: 20px;
+  position: fixed;
+  object-fit: cover;
+  z-index: -1;
+} */
 footer{
     text-align: center;
     padding: 10px;
     position: relative;
     background-color: cornflowerblue;
-    width: 90%;
+    width: 100%;
     border-radius: 20px;
-    justify-items: center;
     margin: auto;
+    margin-top: 40px;
 }
