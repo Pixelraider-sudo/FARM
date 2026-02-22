@@ -78,6 +78,10 @@ img{
   border-radius: 20px;
   margin-top: 10px;
 }
+img:hover{
+  width: 300px;
+  transition:width 2s;
+}
 video{
   top: 0;
   left: 0;
