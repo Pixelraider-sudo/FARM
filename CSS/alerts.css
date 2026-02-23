@@ -90,6 +90,11 @@ p:hover{
   font-size: 20px;
   transition: font-size 2s;
 }
+select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
 h1{
   color: rgb(243, 92, 32);
   padding: 20px;
