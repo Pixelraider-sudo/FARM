@@ -5,12 +5,14 @@
 body{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 1.08rem;
+    text-align: center;
+    color: darkblue;
+    background: linear-gradient(to left,rgb(159, 121, 121),rgb(95, 129, 58),rgb(68, 82, 65));
 }
 nav{
     padding: 20px;
     margin: auto;
     background:linear-gradient(to left,rgb(227, 98, 98),rgb(110, 205, 110),hotpink,rgb(79, 79, 135));
-    position: fixed;
     width: 100%;
     text-align: center;
 }
@@ -33,21 +35,110 @@ a:visited {
 
 /* mouse over link */
 a:hover {
-  color: hotpink;
-  background-color: aliceblue;
-  border-radius: 20px;
+  color:purple;
 }
 
 /* selected link */
 a:active {
   color: blue;
 }
+#alert-cards,#alert-filters{
+  flex: 1 1 350px;
+  padding: 20px;
+  border: 2px dotted plum;
+  border-radius: 20px;
+}
+#alert-cards:hover{
+  background-color: goldenrod;
+}
+#alert-filters:hover{
+  background-color:goldenrod;
+}
+#container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  width: 60%;
+  margin: auto;
+}
+.alert-card{
+  flex: 1 1 350px;
+  padding: 20px;
+  border: 2px dotted plum;
+  border-radius: 20px;
+  background-color: rgba(47, 98, 100, 0.951);
+}
+#alert-cards{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  width: 60%;
+  margin: auto;
+}
+h2{
+  color: rgb(106, 214, 60);
+  padding: 20px;
+}
+h3{
+  color: rgb(175, 71, 189);
+  padding: 20px;
+}
+p:hover{
+  color: royalblue;
+  font-size: 20px;
+  transition: font-size 2s;
+}
+h1{
+  color: rgb(243, 92, 32);
+  padding: 20px;
+}
+p{
+  font-size: 1.2em;
+}
+li{
+  padding: 20px;
+  display: block;
+  margin-bottom: 25px;
+}
+li:hover{
+  color: rgb(47, 44, 209);
+  font-size: 20px;
+  transition: font-size 2s;
+}
+label{
+   color: darkcyan;
+   padding: 20px;
+}
+#alert-type{
+  padding: 10px;
+  width: 40%;
+  border-radius: 10px;
+  margin-bottom: 50px;
+}
+option{
+  font-style: italic;
+  font-size: 1.2em;
+  padding: 10px;
+  gap: 10px;
+}
+video{
+  width: 90%;
+  margin:20px 10px;
+  text-align: center;
+  border-radius: 20px;
+  margin-right: 10px;
+}
+.icon{
+  font-size:30px;
+}
 footer{
     text-align: center;
     padding: 10px;
     position: relative;
     background-color: cornflowerblue;
-    width: 90%;
+    width: 100%;
     border-radius: 20px;
     justify-items: center;
     margin: auto;

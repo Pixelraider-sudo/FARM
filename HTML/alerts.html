@@ -27,7 +27,9 @@
     </header>
 
     <!-- Filters for Alerts (Optional) -->
-    <section id="alert-filters">
+         <h2>Current Alerts</h2>
+   <div id="container">
+     <section id="alert-filters">
         <h2>Filter Alerts</h2>
         <label for="alert-type">Choose Alert Type:</label>
         <select name="alert-type" id="alert-type">
@@ -35,36 +37,40 @@
             <option value="caution">Caution</option>
             <option value="safe">Safe</option>
         </select>
+        <video autoplay loop muted playsinline>
+            <source src="../assets/alert.mp4"></video>
+        </video>
+        <p>Heavy rainfall and strong winds are expected in your area over the next few hours. Residents are advised to stay indoors where possible, avoid flooded roads, and secure any loose outdoor items. Drivers should exercise caution due to reduced visibility and slippery surfaces. Stay tuned to local weather updates and emergency announcements for further information. Stay safe.</p>
     </section>
 
     <!-- Alert Cards Section -->
+ 
     <section id="alert-cards">
-        <h2>Current Alerts</h2>
-
         <!-- Danger Alert -->
         <article class="alert-card" id="danger-alert">
-            <h3>⚠️ Danger</h3>
+            <h3><span class="icon">⚠️</span> Danger</h3>
             <p>Avoid planting maize during drought forecast.</p>
         </article>
 
         <!-- Caution Alert -->
         <article class="alert-card" id="caution-alert">
-            <h3>⚠️ Caution</h3>
+            <h3><span class="icon">⚠️</span> Caution</h3>
             <p>Rotate crops to prevent soil diseases.</p>
         </article>
 
         <!-- Safe Alert -->
         <article class="alert-card" id="safe-alert">
-            <h3>✅ Safe</h3>
+            <h3><span class="icon">✅</span> Safe</h3>
             <p>Use certified seeds for better yield.</p>
         </article>
 
         <!-- Additional Alerts -->
         <article class="alert-card" id="caution-alert-2">
-            <h3>⚠️ Caution</h3>
+            <h3><span class="icon">⚠️</span> Caution</h3>
             <p>Early spraying prevents armyworm spread.</p>
         </article>
     </section>
+   </div>
 
     <!-- Optional Notes Section -->
     <section id="notes">
