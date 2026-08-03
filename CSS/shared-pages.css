@@ -49,3 +49,13 @@
   background: var(--surface); color: var(--text); font-size:.92rem;
 }
 .filter-field select:focus{ outline:none; border-color: var(--green-500); box-shadow: 0 0 0 3px rgba(34,197,94,0.14); }
+
+/* Pill-style category / type filters, reused on crops.html and pests.html */
+.pd-filters{ display:flex; flex-wrap:wrap; gap:10px; justify-content:center; margin-bottom:40px; }
+.pd-filter-btn{
+  border:1px solid var(--border); background: var(--surface); color: var(--text-muted);
+  padding:9px 18px; border-radius: var(--radius-pill); font-size:.86rem; font-weight:600;
+  transition: all .25s var(--ease);
+}
+.pd-filter-btn:hover{ border-color: var(--green-400); color: var(--text); }
+.pd-filter-btn.active{ background: var(--gradient-brand); color:#fff; border-color:transparent; box-shadow: var(--shadow-sm); }

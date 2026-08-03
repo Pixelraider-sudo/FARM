@@ -67,3 +67,34 @@
 }
 .crop-nav-strip a.active{ background: var(--gradient-brand); color:#fff; border-color:transparent; }
 .crop-nav-strip a:hover:not(.active){ border-color: var(--green-400); color: var(--text); }
+
+/* Skeleton loading state, shown while crop-detail-render.js populates content */
+.skeleton{
+  background: linear-gradient(90deg, var(--border) 25%, rgba(34,197,94,0.12) 37%, var(--border) 63%);
+  background-size: 400% 100%;
+  animation: skeleton-shimmer 1.4s ease-in-out infinite;
+  border-radius: var(--radius-sm);
+}
+.skeleton-line{ width:100%; height:14px; margin-bottom:14px; }
+.skeleton-block{ width:100%; border-radius: var(--radius-lg); }
+@keyframes skeleton-shimmer{
+  0%{ background-position: 100% 50%; }
+  100%{ background-position: 0 50%; }
+}
+
+/* Growth stage timeline used on crop-detail pages */
+.growth-timeline{ display:flex; flex-wrap:wrap; gap:20px; }
+.stage-step{
+  flex:1; min-width:160px; background: var(--surface); border:1px solid var(--border);
+  border-radius: var(--radius-md); padding:20px 18px; position:relative;
+  transition: transform .35s var(--ease-spring), box-shadow .35s var(--ease);
+}
+.stage-step:hover{ transform: translateY(-4px); box-shadow: var(--shadow-md); }
+.stage-num{
+  width:30px; height:30px; border-radius:50%; background: var(--gradient-brand); color:#fff;
+  display:flex; align-items:center; justify-content:center; font-weight:800; font-size:.85rem; margin-bottom:12px;
+}
+.stage-step p{ margin:0; font-size:.88rem; color: var(--text-muted); }
+@media (max-width: 700px){
+  .stage-step{ min-width:100%; }
+}

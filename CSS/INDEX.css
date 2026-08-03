@@ -60,7 +60,7 @@
 .service-card.glow-card:hover::before{ opacity:1; }
 .service-icon{
   width:52px; height:52px; border-radius:16px; display:flex; align-items:center; justify-content:center;
-  font-size:1.4rem; margin-bottom:18px; box-shadow: var(--shadow-sm);
+  font-size:.95rem; font-weight:800; letter-spacing:.02em; color:#fff; margin-bottom:18px; box-shadow: var(--shadow-sm);
 }
 .service-card h3{ font-size:1.15rem; margin-bottom:8px; }
 .service-card p{ font-size:.92rem; margin:0; }
@@ -71,7 +71,11 @@
   padding:26px 22px; transition: transform .35s var(--ease-spring), box-shadow .35s var(--ease);
 }
 .why-card:hover{ transform: translateY(-6px); box-shadow: var(--shadow-md); }
-.why-icon{ font-size:1.6rem; margin-bottom:10px; }
+.why-icon{
+  width:40px; height:40px; border-radius:12px; display:flex; align-items:center; justify-content:center;
+  background: var(--green-100); color: var(--green-700); font-size:.85rem; font-weight:800; margin-bottom:14px;
+}
+[data-theme="dark"] .why-icon{ background: rgba(34,197,94,0.14); color: var(--green-400); }
 .why-card h4{ font-size:1rem; margin-bottom:6px; }
 .why-card p{ font-size:.88rem; margin:0; }
 
@@ -121,7 +125,8 @@
 .stars{ color: var(--amber-500); font-size:1.1rem; margin-bottom:14px; }
 .testimonial-card p{ font-size:1.05rem; color: var(--text); font-style:italic; margin-bottom:20px; }
 .testimonial-author{ display:flex; align-items:center; justify-content:center; gap:12px; }
-.avatar-circle{ width:44px; height:44px; border-radius:50%; background: var(--green-100); display:flex; align-items:center; justify-content:center; font-size:1.3rem; }
+.avatar-circle{ width:44px; height:44px; border-radius:50%; background: var(--green-100); color: var(--green-700); display:flex; align-items:center; justify-content:center; font-size:.85rem; font-weight:800; }
+[data-theme="dark"] .avatar-circle{ background: rgba(34,197,94,0.14); color: var(--green-400); }
 .testimonial-author div{ display:flex; flex-direction:column; text-align:left; font-size:.85rem; color: var(--text-muted); }
 .testimonial-dots{ display:flex; justify-content:center; gap:8px; margin-top:22px; }
 .testimonial-dots button{ width:9px; height:9px; border-radius:50%; border:none; background: var(--border); transition: all .3s var(--ease); }

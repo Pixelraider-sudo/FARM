@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title id="page-title">Crop Guide — AgriSense</title>
+<meta name="description" id="page-description" content="Complete crop farming guide including climate, soil, planting, pests, diseases and market info.">
+<link rel="stylesheet" href="../CSS/global.css">
+<link rel="stylesheet" href="../CSS/crop-detail.css">
+<link rel="stylesheet" href="../chatbot/chatbot.css">
+</head>
+<body data-page="crops">
+
+<div id="loader" aria-hidden="true">
+ <div class="loader-logo">A</div>
+ <div class="loader-bar"><div class="loader-bar-fill"></div></div>
+ <div class="loader-text">Loading crop guide…</div>
+</div>
+
+<a class="skip-link" href="#main">Skip to content</a>
+<div id="navbar-placeholder"></div>
+
+<main id="main">
+ <!-- Skeleton state (shown until data renders) -->
+ <div id="crop-skeleton" class="container" style="padding-top:64px;">
+ <div class="skeleton skeleton-line" style="width:40%; height:14px; margin-bottom:24px;"></div>
+ <div class="skeleton skeleton-block" style="height:280px; margin-bottom:24px;"></div>
+ <div class="skeleton skeleton-line" style="width:70%; height:32px;"></div>
+ <div class="skeleton skeleton-line" style="width:90%;"></div>
+ <div class="skeleton skeleton-line" style="width:60%;"></div>
+ </div>
+
+ <!-- Not-found state -->
+ <div id="crop-not-found" class="container text-center" style="display:none; padding:96px 24px;">
+ <div style="font-size:3rem; margin-bottom:16px;"></div>
+ <h1>Crop not found</h1>
+ <p style="max-width:420px; margin:0 auto 24px;">We couldn't find a crop matching that link. Browse the full crop library instead.</p>
+ <a href="crops.html" class="btn btn-primary">Browse Crops</a>
+ </div>
+
+ <!-- Populated by JS -->
+ <div id="crop-content" style="display:none;"></div>
+</main>
+
+<div id="footer-placeholder"></div>
+
+<script src="../JS/global.js" defer></script>
+<script src="../JS/components.js" defer></script>
+<script type="module" src="../JS/crop-detail-render.js"></script>
+<script src="../chatbot/config.example.js" defer></script>
+<script src="../chatbot/gemini.js" defer></script>
+<script src="../chatbot/chatbot.js" defer></script>
+</body>
+</html>
