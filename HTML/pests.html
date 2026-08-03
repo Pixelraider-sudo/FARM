@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pests &amp; Diseases — AgriSense</title>
+<meta name="description" content="Identify pests and diseases across maize, beans, potatoes, tomatoes, rice, coffee and tea, with control and treatment guidance.">
+<link rel="stylesheet" href="../CSS/global.css">
+<link rel="stylesheet" href="../CSS/shared-pages.css">
+<link rel="stylesheet" href="../CSS/pests.css">
+<link rel="stylesheet" href="../chatbot/chatbot.css">
+</head>
+<body data-page="pests">
+
+<div id="loader" aria-hidden="true">
+  <div class="loader-logo">🐛</div>
+  <div class="loader-bar"><div class="loader-bar-fill"></div></div>
+  <div class="loader-text">Scanning for pests and diseases…</div>
+</div>
+
+<a class="skip-link" href="#main">Skip to content</a>
+<div id="navbar-placeholder"></div>
+
+<main id="main">
+  <section class="page-hero">
+    <div class="blob" style="width:340px;height:340px;top:-100px;left:-80px;background:#f59e0b;"></div>
+    <div class="container text-center reveal in">
+      <span class="eyebrow">🐛 Pest &amp; Disease Library</span>
+      <h1>Crop Diseases &amp; Pests Information</h1>
+      <p class="page-hero-sub">Spot the signs early. Symptoms, definitions, and recommended control methods for every crop on the platform.</p>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0;">
+    <div class="container">
+      <div class="pd-filters reveal">
+        <button class="pd-filter-btn active" data-filter="all">All Crops</button>
+        <button class="pd-filter-btn" data-filter="maize">🌽 Maize</button>
+        <button class="pd-filter-btn" data-filter="beans">Beans</button>
+        <button class="pd-filter-btn" data-filter="potato">🥔 Potato</button>
+        <button class="pd-filter-btn" data-filter="tomato">🍅 Tomato</button>
+        <button class="pd-filter-btn" data-filter="rice">🌾 Rice</button>
+        <button class="pd-filter-btn" data-filter="coffee">☕ Coffee</button>
+        <button class="pd-filter-btn" data-filter="tea">🍃 Tea</button>
+      </div>
+      <div class="pd-grid" id="pd-grid">
+        <article class="pd-card glass-card reveal" data-crop="maize">
+          <div class="pd-img"><img src="../assets/maize-mln.jpg" alt="Maize Lethal Necrosis" loading="lazy"></div>
+          <div class="pd-body">
+            <span class="tag badge-danger">Disease</span>
+            <h4>Maize Lethal Necrosis (MLN)</h4>
+              <p><strong>Definition:</strong> A viral disease that causes severe yield loss in maize.</p>
+              <p><strong>Symptoms:</strong> Yellow streaks, drying leaves, stunted growth.</p>
+              <p><strong>Control:</strong> Use certified seeds, crop rotation, remove infected plants.</p>
+              <p><strong>Pesticides:</strong> Imidacloprid, Lambda-cyhalothrin (to control vectors).</p>
+          </div>
+        </article>
+        <article class="pd-card glass-card reveal" data-crop="maize">
+          <div class="pd-img"><img src="../assets/fall-armyworm.jpg" alt="Fall Armyworm" loading="lazy"></div>
+          <div class="pd-body">
+            <span class="tag badge-caution">Pest</span>
+            <h4>Fall Armyworm</h4>
+              <p><strong>Symptoms:</strong> Holes in leaves, damaged cobs.</p>
+              <p><strong>Control:</strong> Early scouting, neem spray.</p>
+              <p><strong>Pesticides:</strong> Spinosad, Emamectin benzoate.</p>
+          </div>
+        </article>
+        <article class="pd-card glass-card reveal" data-crop="beans">
+          <div class="pd-img"><img src="../assets/bean-rust.jpg" alt="Bean Rust" loading="lazy"></div>
+          <div class="pd-body">
+            <span class="tag badge-danger">Disease</span>
+            <h4>Bean Rust</h4>
+              <p><strong>Definition:</strong> A fungal disease causing rust-like leaf spots.</p>
+              <p><strong>Symptoms:</strong> Brown powdery spots, leaf drop.</p>
+              <p><strong>Control:</strong> Resistant varieties, proper spacing.</p>
+              <p><strong>Fungicides:</strong> Mancozeb, Propiconazole.</p>
+          </div>
+        </article>
+        <article class="pd-card glass-card reveal" data-crop="beans">
+          <div class="pd-img"><img src="../assets/bean-aphids.jpg" alt="Bean Aphids" loading="lazy"></div>
+          <div class="pd-body">
+            <span class="tag badge-caution">Pest</span>
+            <h4>Bean Aphids</h4>
+              <p><strong>Symptoms:</strong> Curled leaves, sticky honeydew.</p>
+              <p><strong>Control:</strong> Neem spray, natural predators.</p>
+              <p><strong>Pesticides:</strong> Imidacloprid.</p>
+          </div>
+        </article>
+        <article class="pd-card glass-card reveal" data-crop="potato">
+          <div class="pd-img"><img src="../assets/potato-blight.jpg" alt="Potato Late Blight" loading="lazy"></div>
+          <div class="pd-body">
+            <span class="tag badge-danger">Disease</span>
+            <h4>Late Blight</h4>
+              <p><strong>Definition:</strong> A fast-spreading fungal disease in wet conditions.</p>
+              <p><strong>Symptoms:</strong> Dark leaf spots, tuber rot.</p>
+              <p><strong>Control:</strong> Crop rotation, avoid overhead irrigation.</p>
+              <p><strong>Fungicides:</strong> Mancozeb, Metalaxyl.</p>
+          </div>
+        </article>
+        <article class="pd-card glass-card reveal" data-crop="potato">
+          <div class="pd-img"><img src="../assets/potato-moth.jpg" alt="Potato Tuber Moth" loading="lazy"></div>
+          <div class="pd-body">
+            <span class="tag badge-caution">Pest</span>
+            <h4>Potato Tuber Moth</h4>
+              <p><strong>Symptoms:</strong> Holes in tubers.</p>
+              <p><strong>Control:</strong> Proper storage.</p>
+              <p><strong>Pesticides:</strong> Cypermethrin.</p>
+          </div>
+        </article>
+        <article class="pd-card glass-card reveal" data-crop="tomato">
+          <div class="pd-img"><img src="../assets/tomato-blight.jpg" alt="Tomato Early Blight" loading="lazy"></div>
+          <div class="pd-body">
+            <span class="tag badge-danger">Disease</span>
+            <h4>Early Blight</h4>
+              <p><strong>Symptoms:</strong> Brown spots with rings.</p>
+              <p><strong>Fungicides:</strong> Mancozeb, Chlorothalonil.</p>
+          </div>
+        </article>
+        <article class="pd-card glass-card reveal" data-crop="tomato">
+          <div class="pd-img"><img src="../assets/tuta-absoluta.jpg" alt="Tomato Leaf Miner" loading="lazy"></div>
+          <div class="pd-body">
+            <span class="tag badge-caution">Pest</span>
+            <h4>Tomato Leaf Miner</h4>
+              <p><strong>Symptoms:</strong> Leaf tunnels, fruit damage.</p>
+              <p><strong>Pesticides:</strong> Spinosad, Abamectin.</p>
+          </div>
+        </article>
+        <article class="pd-card glass-card reveal" data-crop="rice">
+          <div class="pd-img"><img src="../assets/rice-blast.jpg" alt="Rice Blast" loading="lazy"></div>
+          <div class="pd-body">
+            <span class="tag badge-danger">Disease</span>
+            <h4>Rice Blast</h4>
+              <p><strong>Symptoms:</strong> Diamond-shaped leaf spots.</p>
+              <p><strong>Fungicides:</strong> Tricyclazole.</p>
+          </div>
+        </article>
+        <article class="pd-card glass-card reveal" data-crop="rice">
+          <div class="pd-img"><img src="../assets/rice-stem-borer.jpg" alt="Rice Stem Borer" loading="lazy"></div>
+          <div class="pd-body">
+            <span class="tag badge-caution">Pest</span>
+            <h4>Rice Stem Borer</h4>
+              <p><strong>Symptoms:</strong> Dead heart, empty grains.</p>
+              <p><strong>Pesticides:</strong> Chlorantraniliprole.</p>
+          </div>
+        </article>
+        <article class="pd-card glass-card reveal" data-crop="coffee">
+          <div class="pd-img"><img src="../assets/coffee-berry-disease.jpg" alt="Coffee Berry Disease" loading="lazy"></div>
+          <div class="pd-body">
+            <span class="tag badge-danger">Disease</span>
+            <h4>Coffee Berry Disease</h4>
+              <p><strong>Symptoms:</strong> Dark sunken spots on berries.</p>
+              <p><strong>Fungicides:</strong> Copper-based fungicides.</p>
+          </div>
+        </article>
+        <article class="pd-card glass-card reveal" data-crop="coffee">
+          <div class="pd-img"><img src="../assets/coffee-berry-borer.jpg" alt="Coffee Berry Borer" loading="lazy"></div>
+          <div class="pd-body">
+            <span class="tag badge-caution">Pest</span>
+            <h4>Coffee Berry Borer</h4>
+              <p><strong>Symptoms:</strong> Holes in berries.</p>
+              <p><strong>Pesticides:</strong> Imidacloprid.</p>
+          </div>
+        </article>
+        <article class="pd-card glass-card reveal" data-crop="tea">
+          <div class="pd-img"><img src="../assets/tea-blister-blight.jpg" alt="Tea Blister Blight" loading="lazy"></div>
+          <div class="pd-body">
+            <span class="tag badge-danger">Disease</span>
+            <h4>Tea Blister Blight</h4>
+              <p><strong>Symptoms:</strong> White blister spots.</p>
+              <p><strong>Fungicides:</strong> Copper fungicides.</p>
+          </div>
+        </article>
+        <article class="pd-card glass-card reveal" data-crop="tea">
+          <div class="pd-img"><img src="../assets/tea-mosquito-bug.jpg" alt="Tea Mosquito Bug" loading="lazy"></div>
+          <div class="pd-body">
+            <span class="tag badge-caution">Pest</span>
+            <h4>Tea Mosquito Bug</h4>
+              <p><strong>Symptoms:</strong> Brown patches on leaves.</p>
+              <p><strong>Pesticides:</strong> Lambda-cyhalothrin.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div id="footer-placeholder"></div>
+
+<script src="../JS/global.js" defer></script>
+<script src="../JS/components.js" defer></script>
+<script src="../JS/pests.js" defer></script>
+<script src="../chatbot/config.example.js" defer></script>
+<script src="../chatbot/gemini.js" defer></script>
+<script src="../chatbot/chatbot.js" defer></script>
+</body>
+</html>

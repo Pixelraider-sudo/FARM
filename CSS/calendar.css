@@ -1,0 +1,33 @@
+.alert-box{
+  display:flex; align-items:center; gap:12px;
+  background: var(--surface-glass-strong); backdrop-filter: blur(12px);
+  border:1px solid var(--green-200); border-left:4px solid var(--green-500);
+  border-radius: var(--radius-md); padding:16px 20px; margin-bottom:36px;
+  box-shadow: var(--shadow-sm);
+}
+[data-theme="dark"] .alert-box{ border-color: rgba(34,197,94,0.3); }
+.alert-box-icon{ font-size:1.3rem; flex-shrink:0; }
+.alert-box p{ margin:0; font-weight:600; color: var(--text); transition: opacity .2s var(--ease); }
+.alert-box p.fade{ opacity:1; animation: fade-in .3s var(--ease); }
+@keyframes fade-in{ from{ opacity:0; } to{ opacity:1; } }
+
+.calendar-table-wrap{ overflow-x:auto; padding:8px; margin-bottom:40px; }
+.calendar-table{ width:100%; border-collapse:collapse; min-width:760px; }
+.calendar-table th, .calendar-table td{
+  padding:12px 10px; text-align:center; font-size:.86rem; border-bottom:1px solid var(--border);
+}
+.calendar-table thead th{
+  font-weight:700; color: var(--text-muted); text-transform:uppercase; font-size:.72rem; letter-spacing:.05em;
+}
+.calendar-table .crop-name{ text-align:left; font-weight:700; color: var(--text); white-space:nowrap; }
+.calendar-table td.on{ font-size:1.1rem; background: var(--green-100); border-radius:10px; }
+[data-theme="dark"] .calendar-table td.on{ background: rgba(34,197,94,0.14); }
+.calendar-table tbody tr:hover{ background: rgba(34,197,94,0.05); }
+
+.calendar-notes{ display:grid; grid-template-columns: 1fr 1fr; gap:24px; }
+@media (max-width: 780px){ .calendar-notes{ grid-template-columns:1fr; } }
+.note-card{ padding:24px 26px; }
+.note-card h4{ margin-bottom:10px; }
+.note-card ul{ display:flex; flex-direction:column; gap:8px; }
+.note-card li{ font-size:.9rem; color: var(--text-muted); padding-left:18px; position:relative; }
+.note-card li::before{ content:"•"; position:absolute; left:0; color: var(--green-600); font-weight:800; }

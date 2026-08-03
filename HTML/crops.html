@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Crop Library — AgriSense</title>
+<meta name="description" content="Browse cultivation guides for maize, beans, tomatoes, potatoes, rice, coffee and tea.">
+<link rel="stylesheet" href="../CSS/global.css">
+<link rel="stylesheet" href="../CSS/crops.css">
+<link rel="stylesheet" href="../chatbot/chatbot.css">
+</head>
+<body data-page="crops">
+
+<div id="loader" aria-hidden="true">
+  <div class="loader-logo">🌿</div>
+  <div class="loader-bar"><div class="loader-bar-fill"></div></div>
+  <div class="loader-text">Gathering crop data…</div>
+</div>
+
+<a class="skip-link" href="#main">Skip to content</a>
+<div id="navbar-placeholder"></div>
+
+<main id="main">
+  <section class="page-hero">
+    <div class="blob" style="width:340px;height:340px;top:-100px;right:-80px;background:var(--green-400);"></div>
+    <div class="container text-center reveal in">
+      <span class="eyebrow">🌱 Crop Library</span>
+      <h1>Every crop, one complete guide</h1>
+      <p class="page-hero-sub">Planting windows, soil needs, pests, diseases, market prices and community — all in one place.</p>
+      <div class="search-bar">
+        <input type="search" id="crop-search" placeholder="Search crops (e.g. maize, tea)…" aria-label="Search crops">
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="grid-4" id="crop-grid">
+        <a href="maize.html" class="crop-card reveal" data-name="maize">
+          <div class="crop-img-wrap"><img src="../assets/maize.jpg" loading="lazy" alt="Maize crop"></div>
+          <div class="crop-card-body">
+            <h4>Maize 🌽</h4>
+            <p>A staple food crop widely grown for human consumption and animal feed, best in warm climates with well-drained soil.</p>
+            <span class="crop-more">View guide →</span>
+          </div>
+        </a>
+        <a href="beans.html" class="crop-card reveal" data-name="beans">
+          <div class="crop-img-wrap"><img src="../assets/beans.jpg" loading="lazy" alt="Beans crop"></div>
+          <div class="crop-card-body">
+            <h4>Beans 🫘</h4>
+            <p>A protein-rich legume that improves soil fertility through nitrogen fixation; grows well with moderate rainfall.</p>
+            <span class="crop-more">View guide →</span>
+          </div>
+        </a>
+        <a href="tomatoes.html" class="crop-card reveal" data-name="tomatoes">
+          <div class="crop-img-wrap"><img src="../assets/tomatoes.jpg" loading="lazy" alt="Tomatoes crop"></div>
+          <div class="crop-card-body">
+            <h4>Tomatoes 🍅</h4>
+            <p>A high-value vegetable crop needing warm weather, careful watering and protection from pests and fungal disease.</p>
+            <span class="crop-more">View guide →</span>
+          </div>
+        </a>
+        <a href="potatoes.html" class="crop-card reveal" data-name="potatoes">
+          <div class="crop-img-wrap"><img src="../assets/potatoes.jpg" loading="lazy" alt="Potatoes crop"></div>
+          <div class="crop-card-body">
+            <h4>Potatoes 🥔</h4>
+            <p>A fast-growing tuber crop suited to cool to moderate climates with loose, well-drained soil.</p>
+            <span class="crop-more">View guide →</span>
+          </div>
+        </a>
+        <a href="rice.html" class="crop-card reveal" data-name="rice">
+          <div class="crop-img-wrap"><img src="../assets/rice.jpg" loading="lazy" alt="Rice crop"></div>
+          <div class="crop-card-body">
+            <h4>Rice 🌾</h4>
+            <p>A major cereal grain grown in flooded or irrigated fields, needing consistent water and warm temperatures.</p>
+            <span class="crop-more">View guide →</span>
+          </div>
+        </a>
+        <a href="coffee.html" class="crop-card reveal" data-name="coffee">
+          <div class="crop-img-wrap"><img src="../assets/coffee.jpg" loading="lazy" alt="Coffee crop"></div>
+          <div class="crop-card-body">
+            <h4>Coffee ☕</h4>
+            <p>A perennial cash crop grown in tropical highlands with rich, well-drained soil and careful pest management.</p>
+            <span class="crop-more">View guide →</span>
+          </div>
+        </a>
+        <a href="tea.html" class="crop-card reveal" data-name="tea">
+          <div class="crop-img-wrap"><img src="../assets/tea.jpg" loading="lazy" alt="Tea crop"></div>
+          <div class="crop-card-body">
+            <h4>Tea 🍃</h4>
+            <p>A plantation crop for cool, high-altitude regions with regular rainfall and acidic, well-maintained soils.</p>
+            <span class="crop-more">View guide →</span>
+          </div>
+        </a>
+      </div>
+      <p id="crop-empty" class="text-center" style="display:none; margin-top:24px;">No crops match your search.</p>
+    </div>
+  </section>
+</main>
+
+<div id="footer-placeholder"></div>
+
+<script src="../JS/global.js" defer></script>
+<script src="../JS/components.js" defer></script>
+<script src="../JS/crops.js" defer></script>
+<script src="../chatbot/config.example.js" defer></script>
+<script src="../chatbot/gemini.js" defer></script>
+<script src="../chatbot/chatbot.js" defer></script>
+</body>
+</html>

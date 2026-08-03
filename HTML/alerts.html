@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Precautions &amp; Alerts — AgriSense</title>
+<meta name="description" content="Live danger, caution and safe farming alerts, plus precautions for pest, weather and soil risks.">
+<link rel="stylesheet" href="../CSS/global.css">
+<link rel="stylesheet" href="../CSS/shared-pages.css">
+<link rel="stylesheet" href="../CSS/alerts.css">
+<link rel="stylesheet" href="../chatbot/chatbot.css">
+</head>
+<body data-page="alerts">
+
+<div id="loader" aria-hidden="true">
+  <div class="loader-logo">🚨</div>
+  <div class="loader-bar"><div class="loader-bar-fill"></div></div>
+  <div class="loader-text">Checking today's alerts…</div>
+</div>
+
+<a class="skip-link" href="#main">Skip to content</a>
+<div id="navbar-placeholder"></div>
+
+<main id="main">
+  <section class="page-hero">
+    <div class="blob" style="width:320px;height:320px;top:-90px;left:-80px;background:#ef4444;"></div>
+    <div class="container text-center reveal in">
+      <span class="eyebrow">🚨 Alerts</span>
+      <h1>Precautions &amp; Alerts</h1>
+      <p class="page-hero-sub">Important guidance for safe and effective farming, updated for current conditions.</p>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0;">
+    <div class="container">
+      <div class="filter-bar reveal">
+        <div class="filter-field">
+          <label for="alert-type">Filter by alert type</label>
+          <select id="alert-type">
+            <option value="all">All alerts</option>
+            <option value="danger">Danger</option>
+            <option value="caution">Caution</option>
+            <option value="safe">Safe</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="weather-banner glass-card reveal">
+        <div class="weather-video-wrap">
+          <video autoplay loop muted playsinline>
+            <source src="../assets/alert.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="weather-banner-body">
+          <span class="tag badge-danger">Live weather warning</span>
+          <p>Heavy rainfall and strong winds are expected in your area over the next few hours. Stay indoors where possible, avoid flooded roads, and secure loose outdoor items. Drivers should take care due to reduced visibility and slippery surfaces.</p>
+        </div>
+      </div>
+
+      <div class="alert-cards-grid" id="alert-cards">
+        <article class="alert-card glass-card reveal" data-type="danger">
+          <span class="tag badge-danger">⚠️ Danger</span>
+          <p>Avoid planting maize during drought forecast.</p>
+        </article>
+        <article class="alert-card glass-card reveal" data-type="caution">
+          <span class="tag badge-caution">⚠️ Caution</span>
+          <p>Rotate crops to prevent soil-borne diseases.</p>
+        </article>
+        <article class="alert-card glass-card reveal" data-type="safe">
+          <span class="tag badge-safe">✅ Safe</span>
+          <p>Use certified seeds for better yield.</p>
+        </article>
+        <article class="alert-card glass-card reveal" data-type="caution">
+          <span class="tag badge-caution">⚠️ Caution</span>
+          <p>Early spraying prevents armyworm spread.</p>
+        </article>
+      </div>
+      <p id="alert-empty" class="text-center" style="display:none; margin-top:24px;">No alerts match this filter.</p>
+
+      <div class="notes-panel glass-card reveal">
+        <h3>📋 Notes for Farmers</h3>
+        <ul>
+          <li>Check weather forecasts before planting.</li>
+          <li>Follow recommended crop rotation schedules.</li>
+          <li>Always use certified and disease-free seeds.</li>
+          <li>Stay updated on pest alerts from local authorities.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div id="footer-placeholder"></div>
+
+<script src="../JS/global.js" defer></script>
+<script src="../JS/components.js" defer></script>
+<script src="../JS/alerts.js" defer></script>
+<script src="../chatbot/config.example.js" defer></script>
+<script src="../chatbot/gemini.js" defer></script>
+<script src="../chatbot/chatbot.js" defer></script>
+</body>
+</html>

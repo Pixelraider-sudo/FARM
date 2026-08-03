@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Farmer Login — AgriSense</title>
+<meta name="description" content="Log in to your AgriSense farmer account to access planting alerts and crop guidance.">
+<link rel="stylesheet" href="../CSS/global.css">
+<link rel="stylesheet" href="../CSS/auth.css">
+<link rel="stylesheet" href="../chatbot/chatbot.css">
+</head>
+<body data-page="login">
+
+<div id="loader" aria-hidden="true">
+  <div class="loader-logo">👨‍🌾</div>
+  <div class="loader-bar"><div class="loader-bar-fill"></div></div>
+  <div class="loader-text">Preparing your dashboard…</div>
+</div>
+
+<a class="skip-link" href="#main">Skip to content</a>
+<div id="navbar-placeholder"></div>
+
+<main id="main">
+  <section class="auth-section">
+    <div class="blob" style="width:340px;height:340px;top:-80px;left:-100px;background:var(--green-400);"></div>
+    <div class="container">
+      <div class="auth-grid reveal in">
+        <div class="auth-visual">
+          <img src="../assets/registerfm.jpg" alt="Farmer in field" loading="lazy">
+          <div class="auth-visual-overlay">
+            <p>"Agriculture can help reduce poverty, raise incomes and improve food security for 80% of the world's poor, who live in rural areas and work mainly in farming."</p>
+            <span>— World Bank Group</span>
+          </div>
+        </div>
+        <div class="auth-card glass-card">
+          <span class="eyebrow">👨‍🌾 Welcome Back</span>
+          <h1>Farmer Login</h1>
+          <p class="auth-sub">Excited to see you back — a true smart farmer. 🌴</p>
+
+          <form id="loginForm" novalidate>
+            <div class="field">
+              <label for="login-email">Email</label>
+              <input type="email" id="login-email" name="email" required autocomplete="email">
+              <div class="field-error-msg">Please enter a valid email address.</div>
+            </div>
+            <div class="field">
+              <label for="login-password">Password</label>
+              <input type="password" id="login-password" name="password" required minlength="6" autocomplete="current-password">
+              <div class="field-error-msg">Password must be at least 6 characters.</div>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block" id="login-submit">
+              <span class="spinner"></span><span class="btn-label">Login</span>
+            </button>
+            <p class="auth-switch">Don't have an account? <a href="register.html">Register here</a></p>
+          </form>
+
+          <div class="form-success" id="login-success">
+            <div class="success-check">✓</div>
+            <h4>Welcome back!</h4>
+            <p>You're logged in. Redirecting you to the dashboard…</p>
+            <a href="INDEX.html" class="btn btn-secondary" style="margin-top:16px;">Go to Dashboard</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div id="footer-placeholder"></div>
+
+<script src="../JS/global.js" defer></script>
+<script src="../JS/components.js" defer></script>
+<script src="../JS/auth.js" defer></script>
+<script src="../chatbot/config.example.js" defer></script>
+<script src="../chatbot/gemini.js" defer></script>
+<script src="../chatbot/chatbot.js" defer></script>
+</body>
+</html>
