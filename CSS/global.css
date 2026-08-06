@@ -5,66 +5,57 @@
    farm-management software rather than decorative marketing.
 ========================================================= */
 
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Libertinus+Math&family=Playwrite+IE:wght@100..400&display=swap');
-
 :root{
-  /* Font import (Google Fonts) */
-  /* Playwrite IE, Josefin Sans, Bebas Neue available via this import */
-  --font-import-url: "https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Libertinus+Math&family=Playwrite+IE:wght@100..400&display=swap";
+  /* Brand palette */
+  --green-50:#f0fdf5;
+  --green-100:#dcfce8;
+  --green-200:#b9f5cf;
+  --green-400:#4ade80;
+  --green-500:#22c55e;
+  --green-600:#16a34a;
+  --green-700:#15803d;
+  --green-900:#0d3b23;
 
-  /* Brown / Milky palette (maps original green tokens to warm, milky-brown tones)
-     This keeps the rest of the UI using the same tokens while switching to
-     a light milky-brown theme across the project. */
-  --green-50:#fbf6f1;
-  --green-100:#f3e7dd;
-  --green-200:#e7d1bf;
-  --green-400:#c89b78;
-  --green-500:#b57f59;
-  --green-600:#9a6a4b;
-  --green-700:#7b4f36;
-  --green-900:#492a18;
+  --amber-400:#fbbf24;
+  --amber-500:#f59e0b;
+  --sky-400:#38bdf8;
+  --sky-500:#0ea5e9;
 
-  --amber-400:#f1c28a;
-  --amber-500:#e09b5a;
-  --sky-400:#9ac9d9;
-  --sky-500:#79b5c6;
+  --ink-900:#0b1512;
+  --ink-800:#101d18;
+  --ink-700:#1a2b23;
+  --ink-500:#4b5f56;
+  --ink-300:#8aa198;
+  --ink-100:#e8f0ec;
 
-  --ink-900:#24160f;
-  --ink-800:#2b1b11;
-  --ink-700:#3a2618;
-  --ink-500:#6b4f3f;
-  --ink-300:#9a8173;
-  --ink-100:#f2efe9;
+  --bg:#f7f8f6;
+  --surface:#ffffff;
+  --surface-glass: rgba(255,255,255,0.86);
+  --surface-glass-strong: rgba(255,255,255,0.96);
+  --border: rgba(15,45,30,0.10);
+  --text:#12211a;
+  --text-muted:#4c5c54;
 
-  /* Core surfaces tuned for a milky-brown aesthetic */
-  --bg:#f8f2ec;
-  --surface:#fffdfc;
-  --surface-glass: rgba(255,253,252,0.86);
-  --surface-glass-strong: rgba(255,253,252,0.96);
-  --border: rgba(56,37,26,0.06);
-  --text:#38251a;
-  --text-muted:#6b4f3f;
-
-  --shadow-sm: 0 1px 2px rgba(56,37,26,0.06);
-  --shadow-md: 0 4px 14px rgba(56,37,26,0.08);
-  --shadow-lg: 0 12px 32px rgba(56,37,26,0.12);
-  --shadow-glow: 0 1px 3px rgba(56,37,26,0.12);
+  --shadow-sm: 0 1px 2px rgba(15,45,30,0.06);
+  --shadow-md: 0 4px 14px rgba(15,45,30,0.08);
+  --shadow-lg: 0 12px 32px rgba(15,45,30,0.12);
+  --shadow-glow: 0 1px 3px rgba(15,45,30,0.12);
 
   --radius-sm: 8px;
   --radius-md: 12px;
   --radius-lg: 16px;
   --radius-pill: 999px;
 
-  --gradient-brand: linear-gradient(135deg, #b57f59 0%, #9a6a4b 100%);
-  --gradient-warm: #b57f59;
-  --gradient-sky: #79b5c6;
+  --gradient-brand: linear-gradient(135deg, #15803d 0%, #16a34a 100%);
+  --gradient-warm: #b45309;
+  --gradient-sky: #0369a1;
   --gradient-mesh: none;
 
   --nav-h: 72px;
   --ease: cubic-bezier(.4,0,.2,1);
   --ease-spring: cubic-bezier(.3,.9,.4,1);
-  --font-display: 'Bebas Neue', 'Google Sans', system-ui, sans-serif;
-  --font-body: 'Playwrite IE', 'Josefin Sans', 'Google Sans', system-ui, -apple-system, sans-serif;
+  --font-display: 'Inter', 'Segoe UI', system-ui, sans-serif;
+  --font-body: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
 }
 
 [data-theme="dark"]{
@@ -86,7 +77,6 @@ html{ scroll-behavior: smooth; }
 html,body{ margin:0; padding:0; overflow-x:hidden; max-width:100%; }
 
 body{
-  font-size:18px;
   font-family: var(--font-body);
   background: var(--bg);
   color: var(--text);
@@ -96,24 +86,6 @@ body{
   padding-top: var(--nav-h);
   position: relative;
 }
-
-/* Helper class for using Playwrite IE with a unique classname
-   Usage: add class "playwrite-ie-1" (or other number) to an element */
-.playwrite-ie-1{
-  font-family: "Playwrite IE", cursive;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-}
-
-/* Playwrite IE helper classes with common weights */
-.playwrite-ie-100{ font-family: "Playwrite IE", cursive; font-optical-sizing: auto; font-weight: 100; font-style: normal; }
-.playwrite-ie-200{ font-family: "Playwrite IE", cursive; font-optical-sizing: auto; font-weight: 200; font-style: normal; }
-.playwrite-ie-300{ font-family: "Playwrite IE", cursive; font-optical-sizing: auto; font-weight: 300; font-style: normal; }
-.playwrite-ie-400{ font-family: "Playwrite IE", cursive; font-optical-sizing: auto; font-weight: 400; font-style: normal; }
-
-/* Apply Playwrite IE to all headings globally for convenience */
-h1,h2,h3,h4,h5,h6{ font-family: "Playwrite IE", cursive; }
 
 body::before{
   content:"";
@@ -128,14 +100,21 @@ body::before{
 img{ max-width:100%; display:block; }
 a{ color: inherit; text-decoration:none; }
 ul{ margin:0; padding:0; list-style:none; }
-h1,h2,h3,h4,h5{ font-family: var(--font-body); font-weight:700; line-height:1.15; margin:0 0 .5em; letter-spacing:-0.01em; }
-# Scale headings a bit larger for readability
-h1{ font-size: clamp(2.2rem, 5.2vw, 3.4rem); }
-h2{ font-size: clamp(1.6rem, 3.2vw, 2.4rem); }
-h3{ font-size: clamp(1.25rem, 2.2vw, 1.6rem); }
+h1,h2,h3,h4,h5{ font-family: var(--font-display); font-weight:700; line-height:1.15; margin:0 0 .5em; letter-spacing:-0.01em; }
 p{ margin:0 0 1em; color: var(--text-muted); }
 button{ font-family: inherit; cursor:pointer; }
 ::selection{ background: var(--green-200); color: var(--green-900); }
+
+/* ---------- Accessibility: keyboard focus ---------- */
+:focus-visible{
+  outline: 2px solid var(--green-600);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+.btn:focus-visible, .icon-btn:focus-visible, .theme-toggle:focus-visible{
+  outline-offset: 3px;
+}
+a:focus-visible{ outline-offset: 3px; }
 
 .container{ width:100%; max-width:1220px; margin:0 auto; padding:0 24px; }
 .section{ padding: 96px 0; }
@@ -154,7 +133,7 @@ button{ font-family: inherit; cursor:pointer; }
 .btn{
   position:relative; overflow:hidden;
   display:inline-flex; align-items:center; justify-content:center; gap:8px;
-  padding:13px 26px; border-radius: var(--radius-sm);
+  padding:12px 24px; border-radius: var(--radius-sm);
   font-weight:600; font-size:.95rem; border:1px solid transparent;
   transition: box-shadow .25s var(--ease), background .25s var(--ease), color .25s var(--ease), border-color .25s var(--ease), transform .15s var(--ease);
   white-space: nowrap;
@@ -164,7 +143,7 @@ button{ font-family: inherit; cursor:pointer; }
 .btn-primary:hover{ background: var(--green-700); box-shadow: var(--shadow-md); }
 .btn-secondary{ background: var(--surface); color:var(--text); border-color: var(--border); }
 .btn-secondary:hover{ border-color: var(--green-500); box-shadow: var(--shadow-sm); }
-.btn-ghost{ background:transparent; color:var(--green-700); padding:10px 18px; }
+.btn-ghost{ background:transparent; color:var(--green-700); padding:8px 16px; }
 .btn-ghost:hover{ background: var(--green-100); }
 .btn-block{ width:100%; }
 .btn .ripple{
@@ -471,5 +450,5 @@ button{ font-family: inherit; cursor:pointer; }
 
 @media (max-width: 720px){
   .section{ padding: 64px 0; }
-  :root{ --nav-h: 68px; }
+  :root{ --nav-h: 64px; }
 }
