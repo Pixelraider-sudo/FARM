@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Search — AgriSense</title>
+<meta name="description" content="Search crops, livestock, diseases, pests and learning articles in one place.">
+<link rel="stylesheet" href="../CSS/global.css">
+<link rel="stylesheet" href="../CSS/shared-pages.css">
+<link rel="stylesheet" href="../CSS/app-pages.css">
+<link rel="stylesheet" href="../chatbot/chatbot.css">
+</head>
+<body data-page="search">
+<div id="loader" aria-hidden="true">
+  <div class="loader-logo">A</div>
+  <div class="loader-bar"><div class="loader-bar-fill"></div></div>
+  <div class="loader-text">Preparing search</div>
+</div>
+<a class="skip-link" href="#main">Skip to content</a>
+<div id="navbar-placeholder"></div>
+<main id="main">
+  <section class="page-hero" style="padding-bottom:24px;">
+    <div class="container text-center reveal in">
+      <span class="eyebrow">Search</span>
+      <h1>Search the whole platform</h1>
+      <p class="page-hero-sub">Crops, livestock, diseases, pests and learning articles — all in one search.</p>
+      <div class="search-bar" style="max-width:560px;">
+        <input type="search" id="global-search" placeholder="Search everything (e.g. maize, blight, goats)" aria-label="Search">
+      </div>
+    </div>
+  </section>
+  <section class="section" style="padding-top:0;">
+    <div class="container">
+      <div class="app-tabs" id="search-tabs">
+        <button class="app-tab active" data-filter="all">All</button>
+        <button class="app-tab" data-filter="crop">Crops</button>
+        <button class="app-tab" data-filter="livestock">Livestock</button>
+        <button class="app-tab" data-filter="disease">Diseases</button>
+        <button class="app-tab" data-filter="article">Learning</button>
+      </div>
+      <div id="search-results"></div>
+      <p id="search-empty" class="text-center" style="display:none; margin-top:24px;">Start typing to search, or try a different term.</p>
+    </div>
+  </section>
+</main>
+<div id="footer-placeholder"></div>
+<script src="../JS/global.js" defer></script>
+<script src="../JS/components.js" defer></script>
+<script type="module" src="../JS/notification-bell.js"></script>
+<script type="module" src="../JS/search-render.js"></script>
+<script src="../chatbot/config.example.js" defer></script>
+<script src="../chatbot/gemini.js" defer></script>
+<script src="../chatbot/chatbot.js" defer></script>
+</body>
+</html>

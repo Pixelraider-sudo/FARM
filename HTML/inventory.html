@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Inventory — AgriSense</title>
+<meta name="description" content="Track seeds, fertilizers, pesticides, tools, equipment, feed and medicine stock levels.">
+<link rel="stylesheet" href="../CSS/global.css">
+<link rel="stylesheet" href="../CSS/shared-pages.css">
+<link rel="stylesheet" href="../CSS/app-pages.css">
+<link rel="stylesheet" href="../chatbot/chatbot.css">
+</head>
+<body data-page="inventory">
+<div id="loader" aria-hidden="true"><div class="loader-logo">A</div><div class="loader-bar"><div class="loader-bar-fill"></div></div><div class="loader-text">Loading inventory</div></div>
+<a class="skip-link" href="#main">Skip to content</a>
+<div id="navbar-placeholder"></div>
+<main id="main">
+  <section class="page-hero" style="padding-bottom:24px;">
+    <div class="container reveal in">
+      <div class="page-hero-row">
+        <div><span class="eyebrow">Inventory</span><h1 style="margin-bottom:6px;">Farm Inventory</h1><p style="margin:0;">Track seeds, fertilizers, pesticides, tools, equipment, feed and medicine.</p></div>
+        <button class="btn btn-primary" id="add-item-btn">Add Item</button>
+      </div>
+    </div>
+  </section>
+  <section class="section" style="padding-top:0;">
+    <div class="container">
+      <div class="stat-tiles" id="inventory-stats"></div>
+      <div class="pd-filters reveal" id="inventory-filters"></div>
+      <div id="inventory-empty" class="empty-state" style="display:none;">
+        <h3>No inventory items yet</h3>
+        <p>Add seeds, fertilizer, tools or other farm supplies to start tracking stock levels.</p>
+        <button class="btn btn-primary" id="add-item-btn-2">Add Your First Item</button>
+      </div>
+      <div class="app-table-wrap" id="inventory-table-wrap" style="display:none;">
+        <table class="app-table">
+          <thead><tr><th>Item</th><th>Category</th><th>Quantity</th><th>Unit</th><th>Status</th><th></th></tr></thead>
+          <tbody id="inventory-tbody"></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <div class="modal-overlay" id="item-modal-overlay">
+    <div class="modal">
+      <div class="modal-header"><h3 id="item-modal-title">Add Item</h3><button class="modal-close" id="item-modal-close" aria-label="Close"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></button></div>
+      <form id="item-form" class="modal-body" novalidate>
+        <input type="hidden" id="item-id">
+        <div class="field"><label for="item-name">Item name</label><input type="text" id="item-name" required></div>
+        <div class="field-row">
+          <div class="field"><label for="item-category">Category</label>
+            <select id="item-category">
+              <option>Seeds</option><option>Fertilizers</option><option>Pesticides</option><option>Tools</option><option>Equipment</option><option>Feed</option><option>Medicine</option>
+            </select>
+          </div>
+          <div class="field"><label for="item-unit">Unit</label><input type="text" id="item-unit" placeholder="kg, litres, pieces"></div>
+        </div>
+        <div class="field-row">
+          <div class="field"><label for="item-quantity">Quantity</label><input type="number" step="0.1" id="item-quantity" required></div>
+          <div class="field"><label for="item-threshold">Low stock threshold</label><input type="number" step="0.1" id="item-threshold" placeholder="Alert below this level"></div>
+        </div>
+        <div class="field"><label for="item-notes">Notes</label><textarea id="item-notes" rows="2"></textarea></div>
+        <button type="submit" class="btn btn-primary btn-block">Save Item</button>
+      </form>
+    </div>
+  </div>
+</main>
+<div id="footer-placeholder"></div>
+<script src="../JS/global.js" defer></script>
+<script src="../JS/components.js" defer></script>
+<script type="module" src="../JS/notification-bell.js"></script>
+<script type="module" src="../JS/inventory-render.js"></script>
+<script src="../chatbot/config.example.js" defer></script>
+<script src="../chatbot/gemini.js" defer></script>
+<script src="../chatbot/chatbot.js" defer></script>
+</body>
+</html>

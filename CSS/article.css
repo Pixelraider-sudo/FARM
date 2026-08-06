@@ -1,0 +1,5 @@
+.article-hero{ position:relative; padding-bottom:24px; }
+.article-img-wrap{ border-radius: var(--radius-lg); overflow:hidden; margin-bottom:36px; box-shadow: var(--shadow-sm); }
+.article-img-wrap img{ width:100%; max-height:420px; object-fit:cover; display:block; }
+.article-body{ max-width:720px; margin:0 auto 56px; }
+.article-body p{ font-size:1.05rem; line-height:1.8; color: var(--text); margin-bottom:22px; }

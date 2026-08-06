@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Farms — AgriSense</title>
+<meta name="description" content="Manage multiple farms: location, size, soil type, water source, irrigation and current crops.">
+<link rel="stylesheet" href="../CSS/global.css">
+<link rel="stylesheet" href="../CSS/shared-pages.css">
+<link rel="stylesheet" href="../CSS/app-pages.css">
+<link rel="stylesheet" href="../chatbot/chatbot.css">
+</head>
+<body data-page="farms">
+
+<div id="loader" aria-hidden="true">
+  <div class="loader-logo">A</div>
+  <div class="loader-bar"><div class="loader-bar-fill"></div></div>
+  <div class="loader-text">Loading your farms</div>
+</div>
+
+<a class="skip-link" href="#main">Skip to content</a>
+<div id="navbar-placeholder"></div>
+
+<main id="main">
+  <section class="page-hero" style="padding-bottom:32px;">
+    <div class="container reveal in">
+      <div class="page-hero-row">
+        <div>
+          <span class="eyebrow">Farm Management</span>
+          <h1 style="margin-bottom:6px;">My Farms</h1>
+          <p style="margin:0; max-width:520px;">Add each farm you manage to unlock personalized dashboard summaries and farm-specific planning.</p>
+        </div>
+        <button class="btn btn-primary" id="add-farm-btn">Add Farm</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0;">
+    <div class="container">
+      <div id="farms-empty" class="empty-state" style="display:none;">
+        <h3>No farms added yet</h3>
+        <p>Add your first farm to start tracking crops, planning seasons and getting personalized alerts.</p>
+        <button class="btn btn-primary" id="add-farm-btn-2">Add Your First Farm</button>
+      </div>
+      <div class="grid-3" id="farms-grid"></div>
+    </div>
+  </section>
+
+  <!-- Add/Edit Farm Modal -->
+  <div class="modal-overlay" id="farm-modal-overlay">
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="farm-modal-title">
+      <div class="modal-header">
+        <h3 id="farm-modal-title">Add Farm</h3>
+        <button class="modal-close" id="farm-modal-close" aria-label="Close">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+      </div>
+      <form id="farm-form" class="modal-body" novalidate>
+        <input type="hidden" id="farm-id">
+        <div class="field">
+          <label for="farm-name">Farm name</label>
+          <input type="text" id="farm-name" required>
+        </div>
+        <div class="field-row">
+          <div class="field"><label for="farm-county">County</label><input type="text" id="farm-county" required></div>
+          <div class="field"><label for="farm-village">Village</label><input type="text" id="farm-village"></div>
+        </div>
+        <div class="field-row">
+          <div class="field"><label for="farm-lat">GPS Latitude</label><input type="text" id="farm-lat" placeholder="e.g. -1.2921"></div>
+          <div class="field"><label for="farm-lng">GPS Longitude</label><input type="text" id="farm-lng" placeholder="e.g. 36.8219"></div>
+        </div>
+        <div class="field-row">
+          <div class="field"><label for="farm-size">Farm size (acres)</label><input type="number" step="0.1" id="farm-size"></div>
+          <div class="field"><label for="farm-altitude">Altitude (m)</label><input type="number" id="farm-altitude"></div>
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label for="farm-soil">Soil type</label>
+            <select id="farm-soil">
+              <option>Loam</option><option>Clay</option><option>Sandy</option><option>Sandy Loam</option><option>Clay Loam</option><option>Volcanic</option>
+            </select>
+          </div>
+          <div class="field"><label for="farm-ph">Soil pH</label><input type="text" id="farm-ph" placeholder="e.g. 6.2"></div>
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label for="farm-water">Water source</label>
+            <select id="farm-water">
+              <option>Rainfall only</option><option>Borehole</option><option>River</option><option>Dam / Pond</option><option>Piped water</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="farm-irrigation">Irrigation method</label>
+            <select id="farm-irrigation">
+              <option>None (rain-fed)</option><option>Drip</option><option>Furrow</option><option>Sprinkler</option><option>Manual</option>
+            </select>
+          </div>
+        </div>
+        <div class="field">
+          <label for="farm-crops">Current crops (comma separated)</label>
+          <input type="text" id="farm-crops" placeholder="e.g. Maize, Beans">
+        </div>
+        <div class="field">
+          <label for="farm-notes">Notes</label>
+          <textarea id="farm-notes" rows="3"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Save Farm</button>
+      </form>
+    </div>
+  </div>
+</main>
+
+<div id="footer-placeholder"></div>
+
+<script src="../JS/global.js" defer></script>
+<script src="../JS/components.js" defer></script>
+<script type="module" src="../JS/notification-bell.js"></script>
+<script type="module" src="../JS/farms-render.js"></script>
+<script src="../chatbot/config.example.js" defer></script>
+<script src="../chatbot/gemini.js" defer></script>
+<script src="../chatbot/chatbot.js" defer></script>
+</body>
+</html>

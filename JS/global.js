@@ -92,6 +92,22 @@
  }
  });
  }
+
+ const toolsTrigger = document.getElementById("nav-tools-trigger");
+ const toolsMenu = document.getElementById("nav-tools-menu");
+ if (toolsTrigger && toolsMenu) {
+ toolsTrigger.addEventListener("click", (e) => {
+ e.stopPropagation();
+ const open = toolsMenu.classList.toggle("open");
+ toolsTrigger.setAttribute("aria-expanded", String(open));
+ });
+ document.addEventListener("click", (e) => {
+ if (!toolsMenu.contains(e.target) && e.target !== toolsTrigger) {
+ toolsMenu.classList.remove("open");
+ toolsTrigger.setAttribute("aria-expanded", "false");
+ }
+ });
+ }
  });
  }
 

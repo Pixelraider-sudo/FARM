@@ -1,0 +1,129 @@
+/* =========================================================
+   AgriSense — App UI Kit
+   Shared styles for the more "operational" pages: farms,
+   inventory, finance, community, notifications, planner,
+   dashboard. Cards, modals, tables, empty states, tabs.
+========================================================= */
+
+.page-hero-row{
+  display:flex; align-items:flex-end; justify-content:space-between; gap:20px; flex-wrap:wrap;
+}
+
+/* ---------- App cards ---------- */
+.app-card{
+  background: var(--surface); border:1px solid var(--border); border-radius: var(--radius-md);
+  padding:20px 22px; transition: box-shadow .25s var(--ease), border-color .25s var(--ease);
+}
+.app-card:hover{ box-shadow: var(--shadow-sm); border-color: rgba(34,197,94,0.3); }
+.app-card-head{ display:flex; align-items:flex-start; justify-content:space-between; gap:10px; margin-bottom:6px; }
+.app-card-head h3{ font-size:1.02rem; margin:0; }
+.app-card-actions{ display:flex; gap:6px; flex-shrink:0; }
+.icon-btn{
+  width:30px; height:30px; border-radius:8px; border:1px solid var(--border); background: var(--surface);
+  color: var(--text-muted); display:flex; align-items:center; justify-content:center; transition: all .2s var(--ease);
+}
+.icon-btn:hover{ border-color: var(--green-400); color: var(--green-600); }
+.icon-btn.danger:hover{ border-color:#dc2626; color:#dc2626; }
+.app-card-meta{ font-size:.85rem; color: var(--text-muted); margin:0 0 12px; }
+.app-card-stats{ display:flex; flex-wrap:wrap; gap:8px; }
+
+/* ---------- Empty states ---------- */
+.empty-state{
+  text-align:center; padding:64px 24px; border:1px dashed var(--border); border-radius: var(--radius-lg);
+  background: var(--surface); margin-bottom: 24px;
+}
+.empty-state h3{ margin-bottom:8px; }
+.empty-state p{ max-width:420px; margin:0 auto 20px; }
+
+/* ---------- Modal ---------- */
+.modal-overlay{
+  position:fixed; inset:0; z-index:2000; background: rgba(11,21,18,0.5);
+  display:flex; align-items:center; justify-content:center; padding:20px;
+  opacity:0; pointer-events:none; transition: opacity .25s var(--ease);
+}
+.modal-overlay.open{ opacity:1; pointer-events:auto; }
+.modal{
+  background: var(--surface); border-radius: var(--radius-lg); width:100%; max-width:520px;
+  max-height:88vh; overflow-y:auto; box-shadow: var(--shadow-lg);
+  transform: translateY(16px) scale(.98); transition: transform .25s var(--ease);
+}
+.modal-overlay.open .modal{ transform:none; }
+.modal-header{
+  display:flex; align-items:center; justify-content:space-between; padding:18px 22px;
+  border-bottom:1px solid var(--border); position:sticky; top:0; background: var(--surface);
+}
+.modal-header h3{ margin:0; font-size:1.1rem; }
+.modal-close{ width:32px; height:32px; border-radius:8px; border:1px solid var(--border); background: var(--surface); color: var(--text-muted); display:flex; align-items:center; justify-content:center; }
+.modal-close:hover{ border-color: var(--green-400); color: var(--green-600); }
+.modal-body{ padding:20px 22px 24px; }
+.field-row{ display:grid; grid-template-columns: 1fr 1fr; gap:14px; }
+@media (max-width: 520px){ .field-row{ grid-template-columns:1fr; } }
+
+/* ---------- Tables ---------- */
+.app-table-wrap{ overflow-x:auto; background: var(--surface); border:1px solid var(--border); border-radius: var(--radius-md); }
+.app-table{ width:100%; border-collapse:collapse; min-width:600px; }
+.app-table th, .app-table td{ padding:12px 16px; text-align:left; font-size:.87rem; border-bottom:1px solid var(--border); }
+.app-table th{ color: var(--text-muted); font-weight:700; text-transform:uppercase; font-size:.7rem; letter-spacing:.04em; }
+.app-table tbody tr:hover{ background: var(--green-50); }
+[data-theme="dark"] .app-table tbody tr:hover{ background: rgba(34,197,94,0.06); }
+.app-table td.num{ font-variant-numeric: tabular-nums; }
+.app-table .row-actions{ display:flex; gap:6px; }
+
+/* ---------- Tabs ---------- */
+.app-tabs{ display:flex; gap:6px; border-bottom:1px solid var(--border); margin-bottom:28px; flex-wrap:wrap; }
+.app-tab{
+  padding:12px 18px; border:none; background:none; font-weight:600; font-size:.9rem; color: var(--text-muted);
+  border-bottom:2px solid transparent; margin-bottom:-1px; transition: color .2s var(--ease), border-color .2s var(--ease);
+}
+.app-tab.active{ color: var(--green-700); border-color: var(--green-600); }
+[data-theme="dark"] .app-tab.active{ color: var(--green-400); }
+
+/* ---------- Stat tiles (dashboard, finance, inventory summaries) ---------- */
+.stat-tiles{ display:grid; grid-template-columns: repeat(4,1fr); gap:16px; margin-bottom:32px; }
+@media (max-width: 900px){ .stat-tiles{ grid-template-columns: repeat(2,1fr); } }
+@media (max-width: 520px){ .stat-tiles{ grid-template-columns: 1fr; } }
+.stat-tile{ background: var(--surface); border:1px solid var(--border); border-radius: var(--radius-md); padding:18px 20px; }
+.stat-tile .stat-tile-label{ font-size:.78rem; font-weight:700; color: var(--text-muted); text-transform:uppercase; letter-spacing:.04em; margin-bottom:8px; }
+.stat-tile .stat-tile-value{ font-size:1.5rem; font-weight:800; font-family: var(--font-display); }
+.stat-tile .stat-tile-value.positive{ color: var(--green-600); }
+.stat-tile .stat-tile-value.negative{ color:#dc2626; }
+
+/* ---------- Toast notifications ---------- */
+#toast-container{ position:fixed; bottom:24px; left:24px; z-index:3000; display:flex; flex-direction:column; gap:10px; }
+.toast{
+  background: var(--ink-900); color:#fff; padding:12px 18px; border-radius: var(--radius-sm); font-size:.85rem;
+  box-shadow: var(--shadow-lg); opacity:0; transform: translateY(10px); transition: all .3s var(--ease);
+}
+.toast.show{ opacity:1; transform:none; }
+
+/* ---------- Badges ---------- */
+.status-badge{ display:inline-flex; align-items:center; gap:5px; padding:3px 10px; border-radius: var(--radius-pill); font-size:.72rem; font-weight:700; }
+.status-badge.low{ background: rgba(239,68,68,0.1); color:#dc2626; }
+.status-badge.ok{ background: rgba(34,197,94,0.12); color: var(--green-700); }
+[data-theme="dark"] .status-badge.ok{ color: var(--green-400); }
+
+/* Market Center county price rows */
+.county-price-list{ margin-top:14px; border-top:1px solid var(--border); padding-top:10px; }
+.county-row{ display:flex; justify-content:space-between; font-size:.82rem; padding:5px 0; color: var(--text-muted); }
+.county-row span:last-child{ font-weight:700; color: var(--text); }
+
+/* Community comments */
+.comments-block{ border-top:1px solid var(--border); padding-top:10px; display:flex; flex-direction:column; gap:8px; }
+.comment-row{ font-size:.85rem; color: var(--text-muted); }
+.comment-input-row input{
+  flex:1; padding:9px 12px; border-radius: var(--radius-sm); border:1px solid var(--border);
+  background: var(--surface); color: var(--text); font-size:.85rem;
+}
+
+/* ---------- Dashboard layout ---------- */
+.dash-grid{ display:grid; grid-template-columns: 1.6fr 1fr; gap:24px; align-items:start; }
+@media (max-width: 900px){ .dash-grid{ grid-template-columns:1fr; } }
+.quick-actions-grid{ display:grid; grid-template-columns: 1fr 1fr; gap:10px; }
+.quick-action-tile{
+  display:flex; align-items:center; justify-content:center; text-align:center;
+  padding:16px 10px; border-radius: var(--radius-sm); border:1px solid var(--border);
+  background: var(--surface); font-size:.82rem; font-weight:700; color: var(--text);
+  transition: all .2s var(--ease);
+}
+.quick-action-tile:hover{ border-color: var(--green-500); background: var(--green-50); }
+[data-theme="dark"] .quick-action-tile:hover{ background: rgba(34,197,94,0.08); }

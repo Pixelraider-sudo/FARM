@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Farm Finance — AgriSense</title>
+<meta name="description" content="Track farm income, expenses and profit with a simple visual monthly breakdown.">
+<link rel="stylesheet" href="../CSS/global.css">
+<link rel="stylesheet" href="../CSS/shared-pages.css">
+<link rel="stylesheet" href="../CSS/app-pages.css">
+<link rel="stylesheet" href="../chatbot/chatbot.css">
+</head>
+<body data-page="finance">
+<div id="loader" aria-hidden="true"><div class="loader-logo">A</div><div class="loader-bar"><div class="loader-bar-fill"></div></div><div class="loader-text">Loading finance data</div></div>
+<a class="skip-link" href="#main">Skip to content</a>
+<div id="navbar-placeholder"></div>
+<main id="main">
+  <section class="page-hero" style="padding-bottom:24px;">
+    <div class="container reveal in">
+      <div class="page-hero-row">
+        <div><span class="eyebrow">Finance</span><h1 style="margin-bottom:6px;">Farm Finance</h1><p style="margin:0;">Track income and expenses, and see profit trends over time.</p></div>
+        <div style="display:flex; gap:10px;">
+          <button class="btn btn-secondary" id="add-income-btn">Add Income</button>
+          <button class="btn btn-primary" id="add-expense-btn">Add Expense</button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section" style="padding-top:0;">
+    <div class="container">
+      <div class="stat-tiles" id="finance-stats"></div>
+      <div class="glass-card reveal" style="padding:24px 26px; margin-bottom:32px;">
+        <h3 style="margin-bottom:16px;">Monthly Income vs Expenses</h3>
+        <div id="finance-chart"></div>
+      </div>
+      <div id="finance-empty" class="empty-state" style="display:none;">
+        <h3>No transactions yet</h3>
+        <p>Log your first income or expense to start tracking farm profitability.</p>
+      </div>
+      <div class="app-table-wrap" id="finance-table-wrap" style="display:none;">
+        <table class="app-table">
+          <thead><tr><th>Date</th><th>Type</th><th>Category</th><th>Description</th><th>Amount</th><th></th></tr></thead>
+          <tbody id="finance-tbody"></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <div class="modal-overlay" id="txn-modal-overlay">
+    <div class="modal">
+      <div class="modal-header"><h3 id="txn-modal-title">Add Transaction</h3><button class="modal-close" id="txn-modal-close" aria-label="Close"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></button></div>
+      <form id="txn-form" class="modal-body" novalidate>
+        <input type="hidden" id="txn-type">
+        <div class="field-row">
+          <div class="field"><label for="txn-date">Date</label><input type="date" id="txn-date" required></div>
+          <div class="field"><label for="txn-amount">Amount</label><input type="number" step="0.01" id="txn-amount" required></div>
+        </div>
+        <div class="field"><label for="txn-category">Category</label><input type="text" id="txn-category" placeholder="e.g. Seed purchase, Maize sale"></div>
+        <div class="field"><label for="txn-description">Description</label><textarea id="txn-description" rows="2"></textarea></div>
+        <button type="submit" class="btn btn-primary btn-block">Save Transaction</button>
+      </form>
+    </div>
+  </div>
+</main>
+<div id="footer-placeholder"></div>
+<script src="../JS/global.js" defer></script>
+<script src="../JS/components.js" defer></script>
+<script type="module" src="../JS/notification-bell.js"></script>
+<script type="module" src="../JS/finance-render.js"></script>
+<script src="../chatbot/config.example.js" defer></script>
+<script src="../chatbot/gemini.js" defer></script>
+<script src="../chatbot/chatbot.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard — AgriSense</title>
+<meta name="description" content="Your farm dashboard: weather, tasks, notifications, market prices and AI insights in one view.">
+<link rel="stylesheet" href="../CSS/global.css">
+<link rel="stylesheet" href="../CSS/shared-pages.css">
+<link rel="stylesheet" href="../CSS/app-pages.css">
+<link rel="stylesheet" href="../chatbot/chatbot.css">
+</head>
+<body data-page="dashboard">
+<div id="loader" aria-hidden="true">
+  <div class="loader-logo">A</div>
+  <div class="loader-bar"><div class="loader-bar-fill"></div></div>
+  <div class="loader-text">Loading your dashboard</div>
+</div>
+<a class="skip-link" href="#main">Skip to content</a>
+<div id="navbar-placeholder"></div>
+<main id="main">
+  <section class="page-hero" style="padding-bottom:16px;">
+    <div class="container reveal in">
+      <span class="eyebrow">Dashboard</span>
+      <h1 id="dashboard-greeting" style="margin-bottom:4px;">Welcome back</h1>
+      <p style="margin:0;" id="dashboard-date"></p>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:16px;">
+    <div class="container">
+      <div class="stat-tiles" id="dashboard-stats"></div>
+
+      <div class="dash-grid">
+        <div class="dash-col-main">
+          <div class="app-card reveal" style="padding:24px; margin-bottom:20px;">
+            <div class="app-card-head"><h3>Today's Recommendations</h3></div>
+            <div id="dashboard-recommendations"></div>
+          </div>
+
+          <div class="app-card reveal" style="padding:24px; margin-bottom:20px;">
+            <div class="app-card-head">
+              <h3>Farm Summary</h3>
+              <a href="farms.html" class="btn btn-ghost" style="padding:0; font-size:.82rem; font-weight:700;">Manage farms &rarr;</a>
+            </div>
+            <div id="dashboard-farms"></div>
+          </div>
+
+          <div class="app-card reveal" style="padding:24px;">
+            <div class="app-card-head">
+              <h3>Market Snapshot</h3>
+              <a href="market.html" class="btn btn-ghost" style="padding:0; font-size:.82rem; font-weight:700;">View market &rarr;</a>
+            </div>
+            <div id="dashboard-market" class="market-row"></div>
+          </div>
+        </div>
+
+        <div class="dash-col-side">
+          <div class="app-card reveal" style="padding:22px; margin-bottom:20px;">
+            <div class="app-card-head"><h3>Notifications</h3></div>
+            <div id="dashboard-notifications"></div>
+            <a href="notifications.html" class="btn btn-ghost" style="padding:8px 0 0; font-size:.82rem; font-weight:700; display:block;">View all &rarr;</a>
+          </div>
+
+          <div class="app-card reveal" style="padding:22px; margin-bottom:20px;">
+            <div class="app-card-head"><h3>Quick Actions</h3></div>
+            <div class="quick-actions-grid">
+              <a href="ai-assistant.html" class="quick-action-tile">Ask AI Assistant</a>
+              <a href="farm-planner.html" class="quick-action-tile">Plan a Season</a>
+              <a href="pests.html" class="quick-action-tile">Check Pests</a>
+              <a href="calendar.html" class="quick-action-tile">Planting Calendar</a>
+            </div>
+          </div>
+
+          <div class="app-card reveal" style="padding:22px;">
+            <div class="app-card-head"><h3>AI Insight</h3></div>
+            <p style="margin-bottom:14px;">Ask the AI assistant about your specific crops, pests, or planting timing for a tailored answer.</p>
+            <a href="ai-assistant.html" class="btn btn-primary btn-block">Open AI Assistant</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+<div id="footer-placeholder"></div>
+<script src="../JS/global.js" defer></script>
+<script src="../JS/components.js" defer></script>
+<script type="module" src="../JS/notification-bell.js"></script>
+<script type="module" src="../JS/dashboard-render.js"></script>
+<script src="../chatbot/config.example.js" defer></script>
+<script src="../chatbot/gemini.js" defer></script>
+<script src="../chatbot/chatbot.js" defer></script>
+</body>
+</html>

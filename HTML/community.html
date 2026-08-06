@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Community — AgriSense</title>
+<meta name="description" content="Ask questions, share farming experience and connect with other farmers.">
+<link rel="stylesheet" href="../CSS/global.css">
+<link rel="stylesheet" href="../CSS/shared-pages.css">
+<link rel="stylesheet" href="../CSS/app-pages.css">
+<link rel="stylesheet" href="../chatbot/chatbot.css">
+</head>
+<body data-page="community">
+<div id="loader" aria-hidden="true">
+  <div class="loader-logo">A</div>
+  <div class="loader-bar"><div class="loader-bar-fill"></div></div>
+  <div class="loader-text">Loading community</div>
+</div>
+<a class="skip-link" href="#main">Skip to content</a>
+<div id="navbar-placeholder"></div>
+<main id="main">
+  <section class="page-hero" style="padding-bottom:24px;">
+    <div class="container">
+      <div class="page-hero-row">
+        <div>
+          <span class="eyebrow">Community</span>
+          <h1 style="margin-bottom:6px;">Farmer Questions & Discussions</h1>
+          <p style="margin:0; max-width:520px;">Ask a question, share what worked on your farm, or help another farmer.</p>
+        </div>
+        <button class="btn btn-primary" id="new-post-btn">Ask a Question</button>
+      </div>
+    </div>
+  </section>
+  <section class="section" style="padding-top:0;">
+    <div class="container" style="max-width:760px;">
+      <div id="posts-list"></div>
+    </div>
+  </section>
+
+  <div class="modal-overlay" id="post-modal-overlay">
+    <div class="modal" role="dialog" aria-modal="true">
+      <div class="modal-header">
+        <h3>Ask a Question</h3>
+        <button class="modal-close" id="post-modal-close" aria-label="Close">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+      </div>
+      <form id="post-form" class="modal-body" novalidate>
+        <div class="field"><label for="post-author">Your name</label><input type="text" id="post-author" required></div>
+        <div class="field"><label for="post-title">Question title</label><input type="text" id="post-title" required></div>
+        <div class="field"><label for="post-tag">Topic</label><input type="text" id="post-tag" placeholder="e.g. Maize, Pests"></div>
+        <div class="field"><label for="post-body">Details</label><textarea id="post-body" rows="4" required></textarea></div>
+        <button type="submit" class="btn btn-primary btn-block">Post Question</button>
+      </form>
+    </div>
+  </div>
+</main>
+<div id="footer-placeholder"></div>
+<script src="../JS/global.js" defer></script>
+<script src="../JS/components.js" defer></script>
+<script type="module" src="../JS/notification-bell.js"></script>
+<script type="module" src="../JS/community-render.js"></script>
+<script src="../chatbot/config.example.js" defer></script>
+<script src="../chatbot/gemini.js" defer></script>
+<script src="../chatbot/chatbot.js" defer></script>
+</body>
+</html>

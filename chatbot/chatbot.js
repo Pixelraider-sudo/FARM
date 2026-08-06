@@ -368,7 +368,23 @@
  renderMessages();
  renderQuickReplies(QUICK_REPLIES);
  wireEvents();
+
+ // Full-page AI Assistant mode: auto-open, stay open, and relocate
+ // the widget into the page's content flow instead of the body root.
+ if (document.body.getAttribute("data-page") === "ai-assistant") {
+ document.body.classList.add("chat-fullpage-mode");
+ const mount = document.getElementById("ai-chat-mount");
+ const win = document.getElementById("agri-chat-window");
+ if (mount && win) mount.appendChild(win);
+ toggleWindow(true);
  }
+ }
+
+ window.AgriChat = {
+ open: () => toggleWindow(true),
+ close: () => toggleWindow(false),
+ send: (text) => sendMessage(text),
+ };
 
  document.addEventListener("components:ready", init, { once: true });
 })();

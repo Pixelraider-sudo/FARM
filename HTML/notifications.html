@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Notifications — AgriSense</title>
+<meta name="description" content="Weather alerts, disease outbreaks, harvest reminders and AI recommendations.">
+<link rel="stylesheet" href="../CSS/global.css">
+<link rel="stylesheet" href="../CSS/shared-pages.css">
+<link rel="stylesheet" href="../CSS/app-pages.css">
+<link rel="stylesheet" href="../chatbot/chatbot.css">
+</head>
+<body data-page="notifications">
+<div id="loader" aria-hidden="true">
+  <div class="loader-logo">A</div>
+  <div class="loader-bar"><div class="loader-bar-fill"></div></div>
+  <div class="loader-text">Loading notifications</div>
+</div>
+<a class="skip-link" href="#main">Skip to content</a>
+<div id="navbar-placeholder"></div>
+<main id="main">
+  <section class="page-hero" style="padding-bottom:24px;">
+    <div class="container">
+      <div class="page-hero-row">
+        <div>
+          <span class="eyebrow">Notifications</span>
+          <h1 style="margin:0;">All Notifications</h1>
+        </div>
+        <button class="btn btn-secondary" id="mark-all-btn">Mark all read</button>
+      </div>
+    </div>
+  </section>
+  <section class="section" style="padding-top:0;">
+    <div class="container" style="max-width:760px;">
+      <div id="notif-list"></div>
+    </div>
+  </section>
+</main>
+<div id="footer-placeholder"></div>
+<script src="../JS/global.js" defer></script>
+<script src="../JS/components.js" defer></script>
+<script type="module" src="../JS/notification-bell.js"></script>
+<script type="module" src="../JS/notifications-page-render.js"></script>
+<script src="../chatbot/config.example.js" defer></script>
+<script src="../chatbot/gemini.js" defer></script>
+<script src="../chatbot/chatbot.js" defer></script>
+</body>
+</html>

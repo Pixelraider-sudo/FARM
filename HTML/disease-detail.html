@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title id="page-title">Disease Guide — AgriSense</title>
+<meta name="description" id="page-description" content="Disease symptoms, causes, diagnosis, treatment and prevention.">
+<link rel="stylesheet" href="../CSS/global.css">
+<link rel="stylesheet" href="../CSS/crop-detail.css">
+<link rel="stylesheet" href="../chatbot/chatbot.css">
+</head>
+<body data-page="diseases">
+<div id="loader" aria-hidden="true">
+  <div class="loader-logo">A</div>
+  <div class="loader-bar"><div class="loader-bar-fill"></div></div>
+  <div class="loader-text">Loading disease guide</div>
+</div>
+<a class="skip-link" href="#main">Skip to content</a>
+<div id="navbar-placeholder"></div>
+<main id="main">
+  <div id="disease-skeleton" class="container" style="padding-top:64px;">
+    <div class="skeleton skeleton-line" style="width:40%; height:14px; margin-bottom:24px;"></div>
+    <div class="skeleton skeleton-block" style="height:240px;"></div>
+  </div>
+  <div id="disease-not-found" class="container text-center" style="display:none; padding:96px 24px;">
+    <h1>Disease not found</h1>
+    <p style="max-width:420px; margin:0 auto 24px;">Browse the full disease library instead.</p>
+    <a href="diseases.html" class="btn btn-primary">Browse Diseases</a>
+  </div>
+  <div id="disease-content" style="display:none;"></div>
+</main>
+<div id="footer-placeholder"></div>
+<script src="../JS/global.js" defer></script>
+<script src="../JS/components.js" defer></script>
+<script type="module" src="../JS/notification-bell.js"></script>
+<script type="module" src="../JS/disease-detail-render.js"></script>
+<script src="../chatbot/config.example.js" defer></script>
+<script src="../chatbot/gemini.js" defer></script>
+<script src="../chatbot/chatbot.js" defer></script>
+</body>
+</html>

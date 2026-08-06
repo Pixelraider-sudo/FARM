@@ -1,0 +1,9 @@
+/* =========================================================
+   Livestock Detail Page — small overrides on top of
+   crop-detail.css, which provides the shared hero/info-card/
+   nav-strip/community-cta layout used by both crop and
+   livestock guides.
+========================================================= */
+
+/* Livestock nav strip can hold long animal names comfortably */
+.crop-nav-strip a{ white-space: nowrap; }

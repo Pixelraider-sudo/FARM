@@ -132,3 +132,11 @@
   #agri-chat-window{ right:12px; left:12px; width:auto; bottom:88px; }
   #agri-chat-launcher{ right:16px; bottom:16px; }
 }
+
+/* Full-page AI Assistant mode: chat becomes the main page content */
+body.chat-fullpage-mode #agri-chat-launcher{ display:none; }
+body.chat-fullpage-mode #agri-chat-window{
+  position:static; width:100%; max-width:820px; height:min(720px, calc(100vh - var(--nav-h) - 140px));
+  margin: 24px auto 64px; opacity:1; transform:none; pointer-events:auto;
+}
+body.chat-fullpage-mode .chat-header .chat-header-actions #chat-close{ display:none; }

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Farm Planner — AgriSense</title>
+<meta name="description" content="Generate a seasonal planting schedule from your crop, farm size and planting date.">
+<link rel="stylesheet" href="../CSS/global.css">
+<link rel="stylesheet" href="../CSS/shared-pages.css">
+<link rel="stylesheet" href="../CSS/app-pages.css">
+<link rel="stylesheet" href="../chatbot/chatbot.css">
+</head>
+<body data-page="planner">
+<div id="loader" aria-hidden="true">
+  <div class="loader-logo">A</div>
+  <div class="loader-bar"><div class="loader-bar-fill"></div></div>
+  <div class="loader-text">Preparing the planner</div>
+</div>
+<a class="skip-link" href="#main">Skip to content</a>
+<div id="navbar-placeholder"></div>
+<main id="main">
+  <section class="page-hero" style="padding-bottom:24px;">
+    <div class="container text-center reveal in">
+      <span class="eyebrow">Farm Planner</span>
+      <h1>Generate a season plan</h1>
+      <p class="page-hero-sub">Pick a crop and planting date, and get a schedule of key farming activities generated from the crop database.</p>
+    </div>
+  </section>
+  <section class="section" style="padding-top:0;">
+    <div class="container">
+      <div class="app-card reveal" style="max-width:640px; margin:0 auto 40px; padding:28px;">
+        <form id="planner-form">
+          <div class="field-row">
+            <div class="field">
+              <label for="planner-crop">Crop</label>
+              <select id="planner-crop"></select>
+            </div>
+            <div class="field">
+              <label for="planner-date">Planting date</label>
+              <input type="date" id="planner-date" required>
+            </div>
+          </div>
+          <div class="field-row">
+            <div class="field">
+              <label for="planner-size">Farm size (acres)</label>
+              <input type="number" step="0.1" id="planner-size" value="1">
+            </div>
+            <div class="field">
+              <label for="planner-location">Location (optional)</label>
+              <input type="text" id="planner-location" placeholder="e.g. Nakuru County">
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">Generate Plan</button>
+        </form>
+      </div>
+
+      <div id="planner-output" style="display:none;">
+        <div class="section-head reveal" style="margin-bottom:28px;">
+          <span class="eyebrow">Your Season Plan</span>
+          <h2 style="font-size:1.6rem;" id="planner-output-title">Schedule</h2>
+        </div>
+        <div class="app-table-wrap reveal">
+          <table class="app-table">
+            <thead><tr><th>Stage</th><th>Task</th><th>Target date</th></tr></thead>
+            <tbody id="planner-schedule-body"></tbody>
+          </table>
+        </div>
+        <div style="margin-top:24px; display:flex; gap:12px; flex-wrap:wrap;">
+          <button class="btn btn-secondary" id="planner-export">Export Plan</button>
+          <a href="calendar.html" class="btn btn-ghost" style="border:1px solid var(--border);">View Planting Calendar</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+<div id="footer-placeholder"></div>
+<script src="../JS/global.js" defer></script>
+<script src="../JS/components.js" defer></script>
+<script type="module" src="../JS/notification-bell.js"></script>
+<script type="module" src="../JS/planner-render.js"></script>
+<script src="../chatbot/config.example.js" defer></script>
+<script src="../chatbot/gemini.js" defer></script>
+<script src="../chatbot/chatbot.js" defer></script>
+</body>
+</html>

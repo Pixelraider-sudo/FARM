@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Farm Assistant — AgriSense</title>
+<meta name="description" content="Chat with the AgriSense AI farm assistant about crops, pests, diseases, planting and market questions.">
+<link rel="stylesheet" href="../CSS/global.css">
+<link rel="stylesheet" href="../CSS/shared-pages.css">
+<link rel="stylesheet" href="../chatbot/chatbot.css">
+</head>
+<body data-page="ai-assistant">
+<div id="loader" aria-hidden="true">
+  <div class="loader-logo">A</div>
+  <div class="loader-bar"><div class="loader-bar-fill"></div></div>
+  <div class="loader-text">Waking up the assistant</div>
+</div>
+<a class="skip-link" href="#main">Skip to content</a>
+<div id="navbar-placeholder"></div>
+<main id="main">
+  <section class="page-hero" style="padding-bottom:16px;">
+    <div class="container text-center reveal in">
+      <span class="eyebrow">AI Farm Assistant</span>
+      <h1>Ask your digital agronomist</h1>
+      <p class="page-hero-sub">Crop selection, planting advice, disease diagnosis, weather interpretation, market guidance and more — all in one conversation.</p>
+    </div>
+  </section>
+  <section class="section" style="padding-top:0;">
+    <div class="container" style="display:flex; justify-content:center;" id="ai-chat-mount">
+      <!-- The chat widget renders here in full-page mode via body[data-page="ai-assistant"] -->
+    </div>
+  </section>
+</main>
+<div id="footer-placeholder"></div>
+<script src="../JS/global.js" defer></script>
+<script src="../JS/components.js" defer></script>
+<script type="module" src="../JS/notification-bell.js"></script>
+<script src="../chatbot/config.example.js" defer></script>
+<script src="../chatbot/gemini.js" defer></script>
+<script src="../chatbot/chatbot.js" defer></script>
+</body>
+</html>

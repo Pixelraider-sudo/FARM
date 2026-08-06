@@ -3,18 +3,18 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Crop Library — AgriSense</title>
-<meta name="description" content="Browse cultivation guides for 26 major crops including cereals, legumes, vegetables, fruits and cash crops.">
+<title>Livestock Library — AgriSense</title>
+<meta name="description" content="Husbandry guides for dairy and beef cattle, goats, sheep, chicken, fish, rabbits and bees.">
 <link rel="stylesheet" href="../CSS/global.css">
 <link rel="stylesheet" href="../CSS/crops.css">
 <link rel="stylesheet" href="../chatbot/chatbot.css">
 </head>
-<body data-page="crops">
+<body data-page="livestock">
 
 <div id="loader" aria-hidden="true">
   <div class="loader-logo">A</div>
   <div class="loader-bar"><div class="loader-bar-fill"></div></div>
-  <div class="loader-text">Gathering crop data</div>
+  <div class="loader-text">Gathering livestock data</div>
 </div>
 
 <a class="skip-link" href="#main">Skip to content</a>
@@ -22,13 +22,13 @@
 
 <main id="main">
   <section class="page-hero">
-    <div class="blob" style="width:340px;height:340px;top:-100px;right:-80px;background:var(--green-400);"></div>
+    <div class="blob" style="width:300px;height:300px;top:-90px;right:-80px;background:var(--green-400);"></div>
     <div class="container text-center reveal in">
-      <span class="eyebrow">Crop Library</span>
-      <h1>Every crop, one complete guide</h1>
-      <p class="page-hero-sub">Planting windows, soil needs, pests, diseases, market prices and community, for 26 major crops.</p>
+      <span class="eyebrow">Livestock Library</span>
+      <h1>Husbandry guides for every animal</h1>
+      <p class="page-hero-sub">Housing, nutrition, breeding, vaccination and disease management for cattle, small stock, poultry, fish and bees.</p>
       <div class="search-bar">
-        <input type="search" id="crop-search" placeholder="Search crops (e.g. maize, tea, avocado)" aria-label="Search crops">
+        <input type="search" id="livestock-search" placeholder="Search livestock (e.g. goats, chicken, bees)" aria-label="Search livestock">
       </div>
     </div>
   </section>
@@ -36,8 +36,8 @@
   <section class="section" style="padding-top:0;">
     <div class="container">
       <div class="pd-filters reveal" id="category-filters"></div>
-      <div class="grid-4" id="crop-grid"></div>
-      <p id="crop-empty" class="text-center" style="display:none; margin-top:24px;">No crops match your search.</p>
+      <div class="grid-4" id="livestock-grid"></div>
+      <p id="livestock-empty" class="text-center" style="display:none; margin-top:24px;">No livestock match your search.</p>
     </div>
   </section>
 </main>
@@ -47,7 +47,7 @@
 <script src="../JS/global.js" defer></script>
 <script src="../JS/components.js" defer></script>
 <script type="module" src="../JS/notification-bell.js"></script>
-<script type="module" src="../JS/crops-list-render.js"></script>
+<script type="module" src="../JS/livestock-list-render.js"></script>
 <script src="../chatbot/config.example.js" defer></script>
 <script src="../chatbot/gemini.js" defer></script>
 <script src="../chatbot/chatbot.js" defer></script>
