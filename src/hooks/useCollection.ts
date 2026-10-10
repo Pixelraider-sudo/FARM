@@ -1,9 +1,20 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import type { Stored } from "@/types";
-import { createRecord, readAll, removeRecord, subscribe, updateRecord, type StorageKey } from "@/lib/storage";
+import {
+  createRecord,
+  readAll,
+  removeRecord,
+  subscribe,
+  updateRecord,
+  type StorageKey,
+} from "@/lib/storage";
 
 /** Reactive view over a localStorage collection. `seed` runs once if the collection is empty. */
-export function useCollection<T extends Stored>(key: StorageKey, prefix: string, seed?: Array<Omit<T, keyof Stored>>) {
+export function useCollection<T extends Stored>(
+  key: StorageKey,
+  prefix: string,
+  seed?: Array<Omit<T, keyof Stored>>,
+) {
   const seeded = useRef(false);
   const [items, setItems] = useState<T[]>(() => {
     const existing = readAll<T>(key);
@@ -24,7 +35,8 @@ export function useCollection<T extends Stored>(key: StorageKey, prefix: string,
   return {
     items: [...items].sort((a, b) => b.createdAt - a.createdAt),
     add: (data: Omit<T, keyof Stored>) => createRecord<T>(key, data, prefix),
-    update: (id: string, patch: Partial<Omit<T, "id">>) => updateRecord<T>(key, id, patch),
+    update: (id: string, patch: Partial<Omit<T, "id">>) =>
+      updateRecord<T>(key, id, patch),
     remove: (id: string) => removeRecord<T>(key, id),
   };
 }
