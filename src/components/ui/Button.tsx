@@ -20,15 +20,45 @@ const sizes: Record<Size, string> = {
   lg: "px-8 py-4 text-base",
 };
 
-export const btnClass = (v: Variant = "primary", s: Size = "md", extra?: string) =>
-  cn(base, variants[v], sizes[s], extra);
+export const btnClass = (
+  v: Variant = "primary",
+  s: Size = "md",
+  extra?: string,
+) => cn(base, variants[v], sizes[s], extra);
 
-interface BtnProps extends ButtonHTMLAttributes<HTMLButtonElement> { variant?: Variant; size?: Size; children: ReactNode }
-export function Button({ variant, size, className, children, ...rest }: BtnProps) {
-  return <button className={btnClass(variant, size, className)} {...rest}>{children}</button>;
+interface BtnProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+  variant?: Variant;
+  size?: Size;
+  children: ReactNode;
+}
+export function Button({
+  variant,
+  size,
+  className,
+  children,
+  ...rest
+}: BtnProps) {
+  return (
+    <button className={btnClass(variant, size, className)} {...rest}>
+      {children}
+    </button>
+  );
 }
 
-interface LinkBtnProps extends LinkProps { variant?: Variant; size?: Size }
-export function LinkButton({ variant, size, className, children, ...rest }: LinkBtnProps) {
-  return <Link className={btnClass(variant, size, className)} {...rest}>{children}</Link>;
+interface LinkBtnProps extends LinkProps {
+  variant?: Variant;
+  size?: Size;
+}
+export function LinkButton({
+  variant,
+  size,
+  className,
+  children,
+  ...rest
+}: LinkBtnProps) {
+  return (
+    <Link className={btnClass(variant, size, className)} {...rest}>
+      {children}
+    </Link>
+  );
 }
