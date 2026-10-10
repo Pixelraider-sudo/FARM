@@ -4,8 +4,12 @@ import { Layout } from "@/components/layout/Layout";
 import Home from "@/pages/Home";
 
 // Route-level code splitting keeps the first load small.
-const lz = <T extends { default: React.ComponentType }>(f: () => Promise<T>) => lazy(f);
-const named = <K extends string>(f: () => Promise<Record<K, React.ComponentType>>, k: K) => lazy(async () => ({ default: (await f())[k] }));
+const lz = <T extends { default: React.ComponentType }>(f: () => Promise<T>) =>
+  lazy(f);
+const named = <K extends string>(
+  f: () => Promise<Record<K, React.ComponentType>>,
+  k: K,
+) => lazy(async () => ({ default: (await f())[k] }));
 
 const Dashboard = lz(() => import("@/pages/Dashboard"));
 const CropsPage = named(() => import("@/pages/Browse"), "CropsPage");
@@ -36,7 +40,16 @@ const Register = named(() => import("@/pages/Auth"), "Register");
 const NotFound = lz(() => import("@/pages/NotFound"));
 
 function Fallback() {
-  return <div className="wrap pt-32"><div className="skeleton h-72 rounded-[2.5rem]" /><div className="mt-6 grid gap-4 sm:grid-cols-3"><div className="skeleton h-48 rounded-3xl" /><div className="skeleton h-48 rounded-3xl" /><div className="skeleton h-48 rounded-3xl" /></div></div>;
+  return (
+    <div className="wrap pt-32">
+      <div className="skeleton h-72 rounded-[2.5rem]" />
+      <div className="mt-6 grid gap-4 sm:grid-cols-3">
+        <div className="skeleton h-48 rounded-3xl" />
+        <div className="skeleton h-48 rounded-3xl" />
+        <div className="skeleton h-48 rounded-3xl" />
+      </div>
+    </div>
+  );
 }
 
 export default function App() {
