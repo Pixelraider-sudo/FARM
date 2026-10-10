@@ -34,20 +34,40 @@ function writeAll<T extends Stored>(key: StorageKey, items: T[]): void {
   window.dispatchEvent(new CustomEvent(EVENT, { detail: key }));
 }
 
-const genId = (prefix: string) => `${prefix}_${Date.now()}_${Math.random().toString(36).slice(2, 8)}`;
+const genId = (prefix: string) =>
+  `${prefix}_${Date.now()}_${Math.random().toString(36).slice(2, 8)}`;
 
-export function createRecord<T extends Stored>(key: StorageKey, data: Omit<T, keyof Stored>, prefix = "id"): T {
+export function createRecord<T extends Stored>(
+  key: StorageKey,
+  data: Omit<T, keyof Stored>,
+  prefix = "id",
+): T {
   const record = { id: genId(prefix), createdAt: Date.now(), ...data } as T;
   writeAll(key, [...readAll<T>(key), record]);
   return record;
 }
 
-export function updateRecord<T extends Stored>(key: StorageKey, id: string, patch: Partial<Omit<T, "id">>): void {
-  writeAll(key, readAll<T>(key).map((r) => (r.id === id ? { ...r, ...patch, updatedAt: Date.now() } : r)));
+export function updateRecord<T extends Stored>(
+  key: StorageKey,
+  id: string,
+  patch: Partial<Omit<T, "id">>,
+): void {
+  writeAll(
+    key,
+    readAll<T>(key).map((r) =>
+      r.id === id ? { ...r, ...patch, updatedAt: Date.now() } : r,
+    ),
+  );
 }
 
-export function removeRecord<T extends Stored>(key: StorageKey, id: string): void {
-  writeAll(key, readAll<T>(key).filter((r) => r.id !== id));
+export function removeRecord<T extends Stored>(
+  key: StorageKey,
+  id: string,
+): void {
+  writeAll(
+    key,
+    readAll<T>(key).filter((r) => r.id !== id),
+  );
 }
 
 export function subscribe(key: StorageKey, cb: () => void): () => void {

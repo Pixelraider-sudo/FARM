@@ -6,7 +6,11 @@ export const fmtMoney = (n: number, currency = "KSh") =>
   `${currency} ${n.toLocaleString(undefined, { maximumFractionDigits: 0 })}`;
 
 export const fmtDate = (d: Date | string | number) =>
-  new Date(d).toLocaleDateString(undefined, { year: "numeric", month: "short", day: "numeric" });
+  new Date(d).toLocaleDateString(undefined, {
+    year: "numeric",
+    month: "short",
+    day: "numeric",
+  });
 
 export const todayISO = () => new Date().toISOString().slice(0, 10);
 
@@ -21,4 +25,8 @@ export function timeAgo(ts: number): string {
   return d < 8 ? `${d}d ago` : fmtDate(ts);
 }
 
-export const slugify = (s: string) => s.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+export const slugify = (s: string) =>
+  s
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-|-$/g, "");
